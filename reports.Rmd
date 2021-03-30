@@ -49,7 +49,7 @@ body{
 
 <hr>
 
-<iframe width="100%" style="height: calc(100vh - 165px);" id="reportFrame" src="https://epiforecasts.io/covid19-forecast-hub-europe/ensemble-report-2021-03-29.html"
+<iframe width="100%" style="height: calc(100vh - 205px);" id="reportFrame" src="https://epiforecasts.io/covid19-forecast-hub-europe/ensemble-report-2021-03-29.html"
   frameborder="0" >
 </iframe>
 
