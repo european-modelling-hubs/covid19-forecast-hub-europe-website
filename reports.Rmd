@@ -5,10 +5,51 @@ output:
     toc: false
     toc_float: false
 ---
-29 March 2021: <br>
-[Ensemble report](https://epiforecasts.io/covid19-forecast-hub-europe/ensemble-report-2021-03-29.html)<br>
-[Evaluation report](https://epiforecasts.io/covid19-forecast-hub-europe/evaluation-report-2021-03-29.html)<br>
-<br>
-22 March 2021: <br>
-[Ensemble report](https://epiforecasts.io/covid19-forecast-hub-europe/ensemble-report-2021-03-22.html)<br>
-[Evaluation report](https://epiforecasts.io/covid19-forecast-hub-europe/evaluation-report-2021-03-22.html)<br>
+<script>
+function getURL(date, report, country) {
+  var str = "https://epiforecasts.io/covid19-forecast-hub-europe/";
+  str = str.concat(report, "-report-", date);
+/*
+  if (!(report === "ensemble")) {
+    str = str.concat("-", country);
+  }
+*/
+  str = str.concat(".html");
+  return(str);
+}
+
+function updateIframe() {
+  var date = date_options.options[date_options.selectedIndex].value;
+  var report = report_options.options[report_options.selectedIndex].value;
+  var country = country_options.options[country_options.selectedIndex].value;
+  document.getElementById('reportFrame').src = getURL(date, report, country);
+}
+</script>
+
+<select id="date_options" name="date_options" onchange="updateIframe()">
+<option value="2021-03-29">2021-03-29</option>
+<option value="2021-03-22">2021-03-22</option>
+</select>
+<select id="report_options" name="report_options" onchange="updateIframe()">
+<option value="ensemble">Ensemble</option>
+<option value="evaluation">Evaluation</option>
+</select>
+<select id="country_options" name="country_options" onchange="updateIframe()" hidden>
+<option value="overall">Overall</option>
+</select>
+
+<style>
+div.main-container {
+    max-width: none;
+}
+body{
+    padding-bottom: 0px;
+}
+</style>
+
+<hr>
+
+<iframe width="100%" style="height: calc(100vh - 165px);" id="reportFrame" src="https://epiforecasts.io/covid19-forecast-hub-europe/ensemble-report-2021-03-29.html"
+  frameborder="0" >
+</iframe>
+
