@@ -1,0 +1,24 @@
+---
+title: "Forecast visualisation"
+output:
+  html_document:
+    toc: false
+    toc_float: false
+---
+<style>
+div.main-container {
+    max-width: none;
+}
+body{
+    padding-bottom: 0px;
+}
+.title{
+    display: none;
+}
+</style>
+
+<iframe width="100%" style="height: calc(100vh - 65px);" name="iframe" src="https://signalerki.github.io/forecast-europe/"
+  frameborder="0"
+  scrolling="no">
+</iframe>
+

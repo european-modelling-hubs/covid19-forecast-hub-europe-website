@@ -1,0 +1,38 @@
+---
+title: "European Covid-19 Forecast Hub"
+output:
+  html_document:
+    toc: false
+    toc_float: false
+---
+<style>
+body{
+    font-size: 19px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+p {
+  padding-top: 50px;
+}
+</style>
+
+:::::: {.columns}
+
+::: {.column width="48%"}
+
+Short-term forecasts of Covid-19 cases and deaths across Europe, created by a multitude of infectious disease modelling teams, coordinated by the [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en).
+
+<div><a href="visualisation.html"><button class="bigButton forecasts">View forecasts</button></a>
+<a href="reports.html"><button class="bigButton reports">Read reports</button></a></div>
+
+:::
+
+::: {.column width="48%"}
+
+![European Forecast hub logo](images/logo.png)
+
+:::
+
+::::::
+

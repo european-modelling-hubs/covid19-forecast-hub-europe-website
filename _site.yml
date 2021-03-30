@@ -1,0 +1,31 @@
+name: "covid19-forecast-hub-europe"
+navbar:
+  title: "European Covid-19 Forecast Hub"
+  type: inverse
+  left:
+    - text: "Forecasts"
+      icon: fas fa-chart-line
+      href: visualisation.html
+    - text: "Reports"
+      icon: fa-file-alt
+      href: reports.html
+    - text: "Community"
+      icon: fa-users
+      href: community.html
+    - text: "Background"
+      icon: fa-info-circle
+      href: background.html
+    - text: "Contact"
+      icon: fa-envelope
+      href: contact.html
+  right:
+    - href: https://github.com/epiforecasts/covid19-forecast-hub-europe
+      icon: fab fa-github
+output:
+  html_document:
+    css: css/styles.css
+    theme: yeti
+    fig_caption: false
+    mathjax: null
+    includes:
+      after_body: blank.html

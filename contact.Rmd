@@ -1,0 +1,8 @@
+---
+title: "Contact"
+output:
+  html_document:
+    toc: false
+    toc_float: false
+---
+To get in touch, send us an email to [mail@covid19forecasthub.eu](mailto:mail@covid19forecasthub.eu).
