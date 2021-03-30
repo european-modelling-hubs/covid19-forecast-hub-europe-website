@@ -28,4 +28,5 @@ output:
     fig_caption: false
     mathjax: null
     includes:
+      in_header: header.html
       after_body: blank.html
