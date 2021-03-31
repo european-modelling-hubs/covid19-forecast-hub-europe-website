@@ -5,7 +5,7 @@ output:
     toc: false
     toc_float: false
 ---
-Teams from anywhere in the world are invited to submit forecasts once a week for one or more of the countries. Take a look at the [submission instructions](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki) and [get in touch](contact.html) with any questions.eamsn Forecast Hub is run in collaboration between the [Epiforecasts team](http://epiforecasts.io/covid), which is part of the [Centre for Mathematical Modelling of Infections Diseases](http://cmmid.github.io/topics/covid19) at the [London School of Hygiene & Tropcial Medicine](http://www.lshtm.ac.uk), and the [European Centre for Disease Control and Prevention](http://ecdc.europa.eu).
+The European Covid-19 Forecast Hub is run in collaboration between the [Epiforecasts team](http://epiforecasts.io/covid), which is part of the [Centre for Mathematical Modelling of Infections Diseases](http://cmmid.github.io/topics/covid19) at the [London School of Hygiene & Tropcial Medicine](http://www.lshtm.ac.uk), and the [European Centre for Disease Control and Prevention](http://ecdc.europa.eu).
 
 It aims to collate and meaningfully combine short-term forecasts of Covid-19 from across Europe (EU and EFTA countries and the UK) in order to improve situational awareness and quantify the current trajectory of Covid-19 everywhere whilst acknowledging uncertainty. This approach was pioneered by the [Reich lab](https://reichlab.io/) and follows similar projects in the [USA](https://covid19forecasthub.org/) and in [Germany and Poland](https://kitmetricslab.github.io/forecasthub/forecast). Another related project is the [US scenario hub](https://covid19scenariomodelinghub.org/).
 
