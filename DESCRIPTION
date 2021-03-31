@@ -1,0 +1,7 @@
+Package: covid19-forecast-hub-europe-website
+Title: Web site for the European Covid-19 Forecast Hub
+Version: 0.0.1
+Description: Collating forecasts of Covid-19 across Europe to inform the policy response
+Imports:
+License: MIT
+Encoding: UTF-8
