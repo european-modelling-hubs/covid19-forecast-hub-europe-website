@@ -13,6 +13,7 @@ jobs:
       - name: Render Site
         run: |-
           Rscript -e "rmarkdown::render_site(encoding = 'UTF-8')"
+          echo covid19forecasthub.eu > _site/CNAME
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: maxheld83/ghpages@v0.2.0
