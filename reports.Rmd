@@ -71,7 +71,7 @@ cat("</select>\n")
 ```{r countries, results = 'asis', echo = FALSE}
 cat("<select id=\"country_options\" name=\"country_options\" ",
     "onchange=\"updateIframe()\" hidden>\n")
-cat("<option value=\"overall\">Overall</option>\n")
+cat("<option value=\"Overall\">Overall</option>\n")
 for (country in countries) {
   cat(paste0("<option value=\"", country, "\">", country, "</option>\n"))
 }
