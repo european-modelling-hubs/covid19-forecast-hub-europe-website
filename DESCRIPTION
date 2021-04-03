@@ -3,5 +3,7 @@ Title: Web site for the European Covid-19 Forecast Hub
 Version: 0.0.1
 Description: Collating forecasts of Covid-19 across Europe to inform the policy response
 Imports:
+  vroom,
+  gh
 License: MIT
 Encoding: UTF-8

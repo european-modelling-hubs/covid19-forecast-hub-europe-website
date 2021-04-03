@@ -5,15 +5,41 @@ output:
     toc: false
     toc_float: false
 ---
+
+Choose the date and type of report you wish do view using the dropdown menu. The _Ensemble_ report shows the recent forecasts and performance of the ensemble, whereas the _Evaluation_ report shows model-by-model performance, overall and by country.
+
+```{r load, include = FALSE}
+library(vroom)
+library(gh)
+
+locations_url <-
+  paste("https://raw.githubusercontent.com",
+        "epiforecasts",
+        "covid19-forecast-hub-europe",
+        "main",
+        "data-locations",
+        "locations_eu.csv",
+        sep = "/")
+countries <- sort(vroom(locations_url)$location_name)
+
+ensemble_files <- gh(
+  "/repos/{owner}/{repo}/contents/{path}",
+  owner = "epiforecasts",
+  repo = "covid19-forecast-hub-europe",
+  path = "data-processed/EuroCOVIDhub-ensemble")
+ensemble_filenames <-
+  grep("\\.csv$", vapply(ensemble_files, "[[", "", "name"), value = TRUE)
+dates <- as.Date(substr(ensemble_filenames, 1, 10))
+dates <- sort(dates[dates >= "2021-03-22"], decreasing = TRUE)
+```
+
 <script>
 function getURL(date, report, country) {
   var str = "https://epiforecasts.io/covid19-forecast-hub-europe/";
   str = str.concat(report, "-report-", date);
-/*
   if (!(report === "ensemble")) {
     str = str.concat("-", country);
   }
-*/
   str = str.concat(".html");
   return(str);
 }
@@ -22,22 +48,35 @@ function updateIframe() {
   var date = date_options.options[date_options.selectedIndex].value;
   var report = report_options.options[report_options.selectedIndex].value;
   var country = country_options.options[country_options.selectedIndex].value;
+  if (report == "evaluation") {
+    country_options.style.visibility = "visible";
+  } else {
+    country_options.style.visibility = "hidden";
+  }
   document.getElementById('reportFrame').src = getURL(date, report, country);
 }
 </script>
 
-<select id="date_options" name="date_options" onchange="updateIframe()">
-<option value="2021-03-29">2021-03-29</option>
-<option value="2021-03-22">2021-03-22</option>
-</select>
+```{r dates, results = 'asis', echo = FALSE}
+cat("<select id=\"date_options\" name=\"date_options\" onchange=\"updateIframe()\">\n")
+for (date in as.character(dates)) {
+  cat(paste0("<option value=\"", date, "\">", date, "</option>\n"))
+}
+cat("</select>\n")
+```
 <select id="report_options" name="report_options" onchange="updateIframe()">
 <option value="ensemble">Ensemble</option>
 <option value="evaluation">Evaluation</option>
 </select>
-<select id="country_options" name="country_options" onchange="updateIframe()" hidden>
-<option value="overall">Overall</option>
-</select>
-
+```{r countries, results = 'asis', echo = FALSE}
+cat("<select id=\"country_options\" name=\"country_options\" ",
+    "onchange=\"updateIframe()\" hidden>\n")
+cat("<option value=\"overall\">Overall</option>\n")
+for (country in countries) {
+  cat(paste0("<option value=\"", country, "\">", country, "</option>\n"))
+}
+cat("</select>\n")
+```
 <style>
 div.main-container {
     max-width: none;
@@ -46,6 +85,7 @@ body{
     padding-bottom: 0px;
 }
 </style>
+
 
 <hr>
 
