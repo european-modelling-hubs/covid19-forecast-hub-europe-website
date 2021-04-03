@@ -49,9 +49,9 @@ function updateIframe() {
   var report = report_options.options[report_options.selectedIndex].value;
   var country = country_options.options[country_options.selectedIndex].value;
   if (report == "evaluation") {
-    country_options.style.hidden = null;
+    country_options.hidden = null;
   } else {
-    country_options.style.hidden = "";
+    country_options.hidden = "";
   }
   document.getElementById('reportFrame').src = getURL(date, report, country);
 }
