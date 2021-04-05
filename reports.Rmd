@@ -35,7 +35,7 @@ dates <- sort(dates[dates >= "2021-03-22"], decreasing = TRUE)
 
 <script>
 function getURL(date, report, country) {
-  var str = "https://epiforecasts.io/covid19-forecast-hub-europe/";
+  var str = "reports/";
   str = str.concat(report, "-report-", date);
   if (!(report === "ensemble")) {
     str = str.concat("-", country);
@@ -89,7 +89,7 @@ body{
 
 <hr>
 
-<iframe width="100%" style="height: calc(100vh - 205px);" id="reportFrame" src="https://epiforecasts.io/covid19-forecast-hub-europe/ensemble-report-2021-03-29.html"
+<iframe width="100%" style="height: calc(100vh - 205px);" id="reportFrame" src="reports/ensemble-report-2021-03-29.html"
   frameborder="0" >
 </iframe>
 
