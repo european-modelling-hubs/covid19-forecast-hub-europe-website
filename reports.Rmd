@@ -49,9 +49,9 @@ function updateIframe() {
   var report = report_options.options[report_options.selectedIndex].value;
   var country = country_options.options[country_options.selectedIndex].value;
   if (report == "evaluation") {
-    country_options.hidden = null;
+    country_options.style.visibility = "visible";
   } else {
-    country_options.hidden = "";
+    country_options.style.visibility = "hidden";
   }
   document.getElementById('reportFrame').src = getURL(date, report, country);
 }
@@ -70,7 +70,7 @@ cat("</select>\n")
 </select>
 ```{r countries, results = 'asis', echo = FALSE}
 cat("<select id=\"country_options\" name=\"country_options\" ",
-    "onchange=\"updateIframe()\" hidden>\n")
+    "onchange=\"updateIframe()\" style=\"visibility: hidden\">\n")
 cat("<option value=\"Overall\">Overall</option>\n")
 for (country in countries) {
   cat(paste0("<option value=\"", country, "\">", country, "</option>\n"))
