@@ -89,7 +89,11 @@ body{
 
 <hr>
 
-<iframe width="100%" style="height: calc(100vh - 205px);" id="reportFrame" src="reports/ensemble-report-2021-03-29.html"
-  frameborder="0" >
-</iframe>
+```{r iframe, results = 'asis', echo = FALSE}
+cat(paste0("<iframe width=\"100%\" style=\"height: calc(100vh - 205px);\" ",
+           "id=\"reportFrame\" src=\"reports/ensemble-report-",
+           dates[1], ".html\"\n"))
+cat("  frameborder=\"0\">\n")
+cat("</iframe>\n")
+```
 
