@@ -53,7 +53,11 @@ function updateIframe() {
   } else {
     country_options.style.visibility = "hidden";
   }
-  document.getElementById('reportFrame').src = getURL(date, report, country);
+  reportframe = document.getElementById('reportFrame');
+  reportframe.src = getURL(date, report, country);
+  reportframe.onload = function(){
+        reportframe.style.height = reportframe.contentWindow.document.body.scrollHeight + 'px';
+    }
 }
 </script>
 
