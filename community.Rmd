@@ -6,3 +6,6 @@ output:
     toc_float: false
 ---
 Teams from anywhere in the world are invited to submit forecasts once a week for one or more of the countries. Take a look at the [submission instructions](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki) and [get in touch](contact.html) with any questions.
+
+
+The ECDC hosts weekly calls which any forecasting team is welcome to join. Each week a different team is invited to present and discuss forecasting methods. Slides and extra content provided by the teams is provided [here](https://github.com/epiforecasts/covid19-forecast-hub-europe/tree/main/presentations).
