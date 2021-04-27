@@ -6,7 +6,7 @@ output:
     toc_float: false
 ---
 
-Choose the date and type of report you wish do view using the dropdown menu. The _Ensemble_ report shows the recent forecasts and performance of the ensemble, whereas the _Evaluation_ report shows model-by-model performance, overall and by country.
+Choose the date and type of report you wish do view using the dropdown menu. The _Ensemble_ report shows the recent forecasts and performance of the ensemble, whereas the _Evaluation_ report shows model-by-model performance, overall and by country. The reports get updated every Tuesday.
 
 ```{r load, include = FALSE}
 library(vroom)
