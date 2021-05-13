@@ -22,7 +22,6 @@ body{
 }
 </style>
 
-<<<<<<< HEAD
 <script>
 var resize_iframe = function() {
     return function(){
