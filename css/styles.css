@@ -55,3 +55,9 @@ a:focus {
 .list-group-item.active:focus {
   background-color: #003a80;
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+    header {
+    padding-bottom: 89.2px !important;
+    }
+}
