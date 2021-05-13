@@ -12,8 +12,8 @@ body{
     font-weight: 300;
 }
 
-p {
-  padding-top: 50px;
+h1 {
+  margin-bottom: 30px;
 }
 </style>
 
@@ -23,8 +23,10 @@ p {
 
 Short-term forecasts of Covid-19 cases and deaths across Europe, created by a multitude of infectious disease modelling teams, coordinated by the [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en).
 
-<div><a href="visualisation.html"><button class="bigButton forecasts">View forecasts</button></a>
-<a href="reports.html"><button class="bigButton reports">Read reports</button></a></div>
+<div>
+<a class="btn btn-default bigButton forecasts" href="/visualisation.html" role="button">View forecasts</a>
+<a class="btn btn-default bigButton reports" href="/reports.html" role="button">Read reports</a>
+</div>
 
 :::
 
@@ -35,4 +37,3 @@ Short-term forecasts of Covid-19 cases and deaths across Europe, created by a mu
 :::
 
 ::::::
-

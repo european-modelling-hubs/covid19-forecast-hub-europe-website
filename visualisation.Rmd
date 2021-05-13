@@ -15,10 +15,34 @@ body{
 .title{
     display: none;
 }
+
+.main-content{
+    padding-top: 45px;
+    height: 100%
+}
 </style>
 
-<iframe width="100%" style="height: calc(100vh - 65px);" name="iframe" src="https://signalerki.github.io/forecast-europe/"
-  frameborder="0"
-  scrolling="no">
-</iframe>
+<script>
+var resize_iframe = function() {
+    return function(){
+        var textHeight = document.getElementById('limitations').clientHeight;
+        var element = document.getElementById('vizFrame');
+        element.style = 'height: calc(100vh - ' + (textHeight + 90) + 'px);'
+    };
+};
+window.onload = resize_iframe();
+window.onresize = resize_iframe();
+</script>
 
+<p id="limitations">
+Please be aware of the [limitations](background.html) when interpreting the forecasts. We recommend to focus on the ensemble which would be expected to give the most reliable forecasts. The individual models that constitute the ensemble are shown for completeness but should not be taken on their own without fully acknowledging the limitations and engaging with the listed authors.
+</p>
+
+<div class="row">
+  <iframe width="100%"
+    id="vizFrame"
+    src="https://signalerki.github.io/forecast-europe/"
+    frameborder="0"
+    scrolling="no">
+  </iframe>
+</div>
