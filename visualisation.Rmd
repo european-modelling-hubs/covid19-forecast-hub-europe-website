@@ -22,6 +22,7 @@ body{
 }
 </style>
 
+<<<<<<< HEAD
 <script>
 var resize_iframe = function() {
     return function(){
@@ -35,7 +36,7 @@ window.onresize = resize_iframe();
 </script>
 
 <p id="limitations">
-Please be aware of the [limitations](background.html) when interpreting the forecasts. We recommend to focus on the ensemble which would be expected to give the most reliable forecasts. The individual models that constitute the ensemble are shown for completeness but should not be taken on their own without fully acknowledging the limitations and engaging with the listed authors.
+Please be aware of the [limitations](background.html) when interpreting the forecasts. We recommend to focus on the ensemble which would be expected to give the most reliable forecasts. The individual models that constitute the ensemble are shown for transparency but should not be taken on their own without fully acknowledging the limitations and engaging with the listed authors.
 </p>
 
 <div class="row">
