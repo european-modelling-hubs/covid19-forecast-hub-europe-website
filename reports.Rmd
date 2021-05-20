@@ -7,7 +7,7 @@ output:
 ---
 
 <p id="intro">
-Choose the date and type of report you wish do view using the dropdown menu. The _Ensemble_ report shows the recent forecasts and performance of the ensemble, whereas the _Evaluation_ report shows model-by-model performance, overall and by country. The reports get updated every Tuesday.
+Choose the type of report you wish do view using the dropdown menu. The _Ensemble_ report shows the recent forecasts and performance of the ensemble, whereas the _Evaluation_ report shows model-by-model performance, overall and by country. The reports get updated every Tuesday. For older reports visit the [archive](https://github.com/epiforecasts/covid19-forecast-hub-europe-website/tree/main/reports).
 </p>
 
 ```{r load, include = FALSE}
@@ -79,18 +79,11 @@ window.onload = resize_iframe();
 window.onresize = resize_iframe();
 </script>
 
-```{r dates, results = 'asis', echo = FALSE}
-cat("<select id=\"date_options\" name=\"date_options\" onchange=\"updateIframe()\">\n")
-for (date in as.character(dates)) {
-  cat(paste0("<option value=\"", date, "\">", date, "</option>\n"))
-}
-cat("</select>\n")
-```
 <select id="report_options" name="report_options" onchange="updateIframe()">
 <option value="ensemble">Ensemble</option>
 <option value="evaluation">Evaluation</option>
 </select>
-```{r countries, results = 'asis', echo = FALSE}
+```{r countries_dates, results = 'asis', echo = FALSE}
 cat("<select id=\"country_options\" name=\"country_options\" ",
     "onchange=\"updateIframe()\" style=\"visibility: hidden\">\n")
 cat("<option value=\"Overall\">Overall</option>\n")
@@ -98,7 +91,14 @@ for (country in countries) {
   cat(paste0("<option value=\"", country, "\">", country, "</option>\n"))
 }
 cat("</select>\n")
+cat("<select id=\"date_options\" name=\"date_options\"",
+    "onchange=\"updateIframe()\" style=\"visibility: hidden\">\n")
+for (date in as.character(dates)) {
+  cat(paste0("<option value=\"", date, "\">", date, "</option>\n"))
+}
+cat("</select>\n")
 ```
+
 <style>
 div.main-container {
     max-width: none;
