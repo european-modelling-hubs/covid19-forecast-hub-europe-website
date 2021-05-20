@@ -112,7 +112,7 @@ body{
 <hr>
 
 ```{r iframe, results = 'asis', echo = FALSE}
-cat(paste0("<iframe width=\"100%\"",
+cat(paste0("<iframe width=\"100%\" style=\"height: calc(100vh - 325px);\"",
            "id=\"reportFrame\" src=\"reports/ensemble-report-",
            dates[1], ".html\"\n"))
 cat("  frameborder=\"0\">\n")
