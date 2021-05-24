@@ -52,8 +52,10 @@ function updateIframe() {
   var country = country_options.options[country_options.selectedIndex].value;
   var date;
   if (report == "evaluation") {
+    country_options.style.visibility = "visible";
     date = "`r as.character(evaluation_report_date)`";
   } else {
+    country_options.style.visibility = "hidden";
     date = "`r as.character(ensemble_report_date)`";
   }
   document.getElementById('reportFrame').src = getURL(date, report, country);
