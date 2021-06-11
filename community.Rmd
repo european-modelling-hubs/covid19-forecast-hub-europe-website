@@ -7,5 +7,26 @@ output:
 ---
 Teams from anywhere in the world are invited to submit forecasts once a week for one or more of the countries. Take a look at the [submission instructions](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki) and [get in touch](contact.html) with any questions.
 
+# Presentations
 
-The ECDC hosts weekly calls which any forecasting team is welcome to join. Each week a different team is invited to present and discuss forecasting methods. Slides and extra content provided by the teams is provided in [presentations](https://github.com/epiforecasts/covid19-forecast-hub-europe-website/tree/main/presentations).
+The ECDC hosts weekly calls which any forecasting team is welcome to join. Each week a different team is invited to present and discuss forecasting methods. Slides and extra content provided by the teams can be accessed below:
+
+```{r presentations, results='asis', echo=FALSE}
+library("httr")
+url <- paste0("https://api.github.com/repos/epiforecasts/",
+              "covid19-forecast-hub-europe-website/contents/presentations")
+req <- GET(url)
+stop_for_status(req)
+files <- unlist(lapply(content(req), "[[", "name"))
+
+for (file in rev(files)) {
+  date <- sub("^([0-9]{4})-([0-9]{2})-([0-9]{2})-.*$", "\\3/\\2/\\1", file)
+  name <- gsub("-", " ",
+               sub("^[0-9]{4}-[0-9]{2}-[0-9]{2}-([^.]*)\\..*$", "\\1", file))
+  url <-
+    paste0("https://github.com/epiforecasts/",
+           "covid19-forecast-hub-europe-website/raw/main/presentations/",
+           file)
+  cat(date, "\t\t", paste0("[", name, "](", url, ")"), "\n\n")
+}
+```
