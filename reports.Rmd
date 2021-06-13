@@ -22,24 +22,12 @@ locations_url <-
         "locations_eu.csv",
         sep = "/")
 countries <- sort(vroom(locations_url)$location_name)
-
-ensemble_reports <- list.files("reports", pattern = "^ensemble-report")
-ensemble_report_dates <-
-  as.Date(sub("^ensemble-report-(.+).html", "\\1", ensemble_reports))
-ensemble_report_date <- max(ensemble_report_dates)
-
-evaluation_overall_reports <-
-  list.files("reports", pattern = "^evaluation-report.*-Overall.html")
-evaluation_report_dates <-
-  as.Date(sub("^evaluation-report-(.+)-Overall.html", "\\1",
-              evaluation_overall_reports))
-evaluation_report_date <- max(evaluation_report_dates)
 ```
 
 <script>
-function getURL(date, report, country) {
+function getURL(report, country) {
   var str = "reports/";
-  str = str.concat(report, "-report-", date);
+  str = str.concat(report, "-report");
   if (!(report === "ensemble")) {
     str = str.concat("-", country);
   }
@@ -50,15 +38,12 @@ function getURL(date, report, country) {
 function updateIframe() {
   var report = report_options.options[report_options.selectedIndex].value;
   var country = country_options.options[country_options.selectedIndex].value;
-  var date;
   if (report == "evaluation") {
     country_options.style.visibility = "visible";
-    date = "`r as.character(evaluation_report_date)`";
   } else {
     country_options.style.visibility = "hidden";
-    date = "`r as.character(ensemble_report_date)`";
   }
-  document.getElementById('reportFrame').src = getURL(date, report, country);
+  document.getElementById('reportFrame').src = getURL(report, country);
 }
 
 var resize_iframe = function() {
@@ -100,8 +85,7 @@ body{
 
 ```{r iframe, results = 'asis', echo = FALSE}
 cat(paste0("<iframe width=\"100%\" style=\"height: calc(100vh - 325px);\"",
-           "id=\"reportFrame\" src=\"reports/ensemble-report-",
-           ensemble_report_date, ".html\"\n"))
+           "id=\"reportFrame\" src=\"reports/ensemble-report.html\"\n"))
 cat("  frameborder=\"0\">\n")
 cat("</iframe>\n")
 ```
