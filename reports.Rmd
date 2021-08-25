@@ -7,7 +7,7 @@ output:
 ---
 
 <p id="intro">
-Choose the type of report you wish do view using the dropdown menu. The _Ensemble_ report shows the recent forecasts and performance of the ensemble, whereas the _Evaluation_ report shows model-by-model performance, overall and by country. The reports get updated every Tuesday. For older reports visit the [archive](https://github.com/epiforecasts/covid19-forecast-hub-europe-website/tree/main/reports).
+Choose the type of report you wish do view using the dropdown menu. The _Ensemble_ report shows the recent forecasts and performance of the ensemble, whereas the _Evaluation_ report shows model-by-model performance, overall and by country. The reports get updated every Tuesday.
 </p>
 
 ```{r load, include = FALSE}
