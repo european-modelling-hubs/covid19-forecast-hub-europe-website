@@ -35,7 +35,7 @@ window.onresize = resize_iframe();
 </script>
 
 <p id="limitations">
-Please be aware of the [limitations](background.html) when interpreting the forecasts. We recommend to focus on the ensemble which would be expected to give the most reliable forecasts. The individual models that constitute the ensemble are shown for transparency but should not be taken on their own without fully acknowledging the limitations and engaging with the listed authors. Note that these models have been contributed by independent teams who do not represent ECDC or the London School of Hygiene and Tropical Medicine.
+Please be aware of the [limitations](background.html) when interpreting the forecasts. We recommend to focus on the ensemble which would be expected to give the most reliable forecasts. The individual models that constitute the ensemble are shown for transparency but should not be taken on their own without fully acknowledging the limitations and engaging with the listed authors. These models have been contributed by independent teams who do not represent ECDC or the London School of Hygiene & Tropical Medicine.
 </p>
 
 <div class="row">
