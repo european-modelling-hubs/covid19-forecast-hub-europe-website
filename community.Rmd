@@ -9,7 +9,7 @@ Teams from anywhere in the world are invited to submit forecasts once a week for
 
 # Teams
 
-```{r teams, echo = FALSE, warning = FALSE}
+```{r teams, echo = FALSE, warning = FALSE, message = FALSE}
 library("yaml")
 library("purrr")
 library("fs")
@@ -38,12 +38,13 @@ team_df <-
     md_link = glue::glue("[Metadata]({link})"),
     model_abbr = glue::glue("[{model_abbr}]({website_url})"),
     .keep = "unused"
-  )
+  ) %>%
+  arrange(tolower(model_abbr))
 
 team_df  %>%
   relocate(
     "Model name" = model_abbr,
-    "Team name" = team_name,
+    "Affiliation" = team_name,
     "Methods" = methods,
     "Complete metadata" = md_link
   ) %>%
