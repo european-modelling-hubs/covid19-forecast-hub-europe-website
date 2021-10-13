@@ -35,7 +35,7 @@ team_df <-
   imap_dfr(~ c(link = .y, read_yaml(.x))) %>%
   select(link, model_abbr, team_name, website_url, methods) %>%
   mutate(
-    md_link = glue::glue("[More details]({link})"),
+    md_link = glue::glue("[Metadata]({link})"),
     model_abbr = glue::glue("[{model_abbr}]({website_url})"),
     .keep = "unused"
   )
