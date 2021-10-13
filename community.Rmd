@@ -7,6 +7,49 @@ output:
 ---
 Teams from anywhere in the world are invited to submit forecasts once a week for one or more of the countries. Take a look at the [submission instructions](https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki) and [get in touch](contact.html) with any questions.
 
+# Teams
+
+```{r teams, echo = FALSE, warning = FALSE}
+library("yaml")
+library("purrr")
+library("fs")
+library("dplyr")
+
+github_repo <- "epiforecasts/covid19-forecast-hub-europe"
+branch <- "main"
+
+team_df <-
+  gh::gh(
+        paste0("https://api.github.com/repos/{github_repo}/",
+               "git/trees/{branch}?recursive=1"),
+        github_repo = github_repo, branch = branch
+        ) %>%
+  pluck("tree") %>%
+  keep(~ .x$type == "blob" &&
+         grepl("data-processed/(.*)/metadata-\\1", .x$path)) %>%
+  map_chr(~ glue::glue(
+                    paste0("https://raw.githubusercontent.com/{github_repo}/",
+                           "{branch}/{.x$path}")
+                  )) %>%
+  set_names() %>%
+  imap_dfr(~ c(link = .y, read_yaml(.x))) %>%
+  select(link, model_abbr, team_name, website_url, methods) %>%
+  mutate(
+    md_link = glue::glue("[More details]({link})"),
+    model_abbr = glue::glue("[{model_abbr}]({website_url})"),
+    .keep = "unused"
+  )
+
+team_df  %>%
+  relocate(
+    "Model name" = model_abbr,
+    "Team name" = team_name,
+    "Methods" = methods,
+    "Complete metadata" = md_link
+  ) %>%
+  knitr::kable(format = "markdown")
+```
+
 # Presentations
 
 The ECDC hosts weekly calls which any forecasting team is welcome to join. Each week a different team is invited to present and discuss forecasting methods. Slides and extra content provided by the teams can be accessed below:
