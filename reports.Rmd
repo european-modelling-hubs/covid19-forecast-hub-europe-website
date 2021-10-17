@@ -7,11 +7,12 @@ output:
 ---
 
 <p id="intro">
-Choose the type of report you wish do view using the dropdown menu. The _Ensemble_ report shows the recent forecasts and performance of the ensemble, whereas the _Evaluation_ report shows model-by-model performance, overall and by country. The reports get updated every Tuesday.
+Choose the type of report you wish do view using the dropdown menu. The _Model_ reports shows the recent forecasts and performance of the ensemble or individual models, whereas the _Country_ reports shows model-by-model performance, either overall or by country. The reports get updated every Tuesday.
 </p>
 
 ```{r load, include = FALSE}
 library(vroom)
+library(gh)
 
 locations_url <-
   paste("https://raw.githubusercontent.com",
@@ -22,28 +23,56 @@ locations_url <-
         "locations_eu.csv",
         sep = "/")
 countries <- sort(vroom(locations_url)$location_name)
+
+evaluation_files <-
+  gh("/repos/{owner}/{repo}/contents/{path}",
+     owner = "epiforecasts",
+     repo = "covid19-forecast-hub-europe",
+     path = "evaluation/weekly-summary")
+file_names <-
+  vapply(evaluation_files, "[[", "", "name")
+
+evaluation_url <-
+  paste("https://raw.githubusercontent.com",
+        "epiforecasts",
+        "covid19-forecast-hub-europe",
+        "main",
+        "evaluation",
+        "weekly-summary",
+        tail(file_names, n = 1),
+        sep = "/")
+models <- unique(vroom(evaluation_url)$model)
+models <- models[order(tolower(models))]
+
+hub_model <- grep("hub-ensemble$", models, value = TRUE)
+models <- setdiff(models, grep("hub-(ensemble|baseline)$", models, value = TRUE))
+## case insensitive sort
 ```
 
 <script>
-function getURL(report, country) {
+function getURL(report, select) {
   var str = "reports/";
   str = str.concat(report, "-report");
-  if (!(report === "ensemble")) {
-    str = str.concat("-", country);
-  }
+  str = str.concat("-", select);
   str = str.concat(".html");
   return(str);
 }
 
 function updateIframe() {
-  var report = report_options.options[report_options.selectedIndex].value;
-  var country = country_options.options[country_options.selectedIndex].value;
-  if (report == "evaluation") {
-    country_options.style.visibility = "visible";
+  var report = report_options.value;
+  var country = country_options.value;
+  var model = model_options.value;
+  var selection;
+  if (report == "country") {
+    country_options.style.display = "inline";
+    model_options.style.display = "none";
+    selection = country;
   } else {
-    country_options.style.visibility = "hidden";
+    country_options.style.display = "none";
+    model_options.style.display = "inline";
+    selection = model;
   }
-  document.getElementById('reportFrame').src = getURL(report, country);
+  document.getElementById('reportFrame').src = getURL(report, selection);
 }
 
 var resize_iframe = function() {
@@ -58,12 +87,19 @@ window.onresize = resize_iframe();
 </script>
 
 <select id="report_options" name="report_options" onchange="updateIframe()">
-<option value="ensemble">Ensemble</option>
-<option value="evaluation">Evaluation</option>
+<option value="model">Models</option>
+<option value="country">Countries</option>
 </select>
-```{r countries, results = 'asis', echo = FALSE}
+```{r options, results = 'asis', echo = FALSE}
+cat("<select id=\"model_options\" name=\"model_options\" ",
+    "onchange=\"updateIframe()\" style=\"display: inline\">\n")
+cat(paste0("<option value=\"", hub_model, "\">Ensemble</option>\n"))
+for (model in models) {
+  cat(paste0("<option value=\"", model, "\">", model, "</option>\n"))
+}
+cat("</select>\n")
 cat("<select id=\"country_options\" name=\"country_options\" ",
-    "onchange=\"updateIframe()\" style=\"visibility: hidden\">\n")
+    "onchange=\"updateIframe()\" style=\"display: none\">\n")
 cat("<option value=\"Overall\">Overall</option>\n")
 for (country in countries) {
   cat(paste0("<option value=\"", country, "\">", country, "</option>\n"))
@@ -85,7 +121,7 @@ body{
 
 ```{r iframe, results = 'asis', echo = FALSE}
 cat(paste0("<iframe width=\"100%\" style=\"height: calc(100vh - 325px);\"",
-           "id=\"reportFrame\" src=\"reports/ensemble-report.html\"\n"))
+           "id=\"reportFrame\" src=\"reports/model-report-EuroCOVIDhub-ensemble.html\"\n"))
 cat("  frameborder=\"0\">\n")
 cat("</iframe>\n")
 ```
