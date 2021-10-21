@@ -1,23 +1,49 @@
 name: Render and Deploy RMarkdown Website
-'on': push
+
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout Repository
         uses: actions/checkout@master
-      - name: Install Package Dependencies
-        run: |-
-          Rscript -e "install.packages('remotes', repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
-          Rscript -e "remotes::install_deps(dependencies = TRUE, repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
+        with:
+          submodules: true
+
+      - uses: r-lib/actions/setup-r@v1
+        with:
+          install-r: false
+          use-public-rspm: true
+
+      - name: Install R Package Dependencies
+        uses: r-lib/actions/setup-r-dependencies@v1
+
       - name: Render Site
-        run: |-
-          Rscript -e "rmarkdown::render_site(encoding = 'UTF-8')"
-          echo covid19forecasthub.eu > _site/CNAME
+        run: rmarkdown::render_site(encoding = 'UTF-8')
+        shell: Rscript {0}
+
+      - name: Set CNAME
+        run: echo covid19forecasthub.eu > _site/CNAME
+
+      - uses: actions/setup-node@v1
+        with:
+          cache: npm
+          cache-dependency-path: angular-app/package-lock.json
+
+      - name: Install Node Dependencies
+        run: npm install
+
+      - name: Build Angular App
+        run: |
+          cd angular-app
+          ng build --index=../_site/visualisation.html --output-path=../_site/ --delete-output-path=false --base-href="/"
+
       - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
         uses: maxheld83/ghpages@v0.2.0
         env:
           BUILD_DIR: _site
           GH_PAT: ${{ secrets.GH_PAT }}
-    container: rocker/verse:latest
