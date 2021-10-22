@@ -1,3 +1,4 @@
 [submodule "angular-app"]
 	path = angular-app
 	url = git@github.com:epiforecasts/covid19-forecast-hub-europe-viz.git
+	ignore = all
