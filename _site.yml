@@ -30,3 +30,4 @@ output:
     includes:
       in_header: header.html
       after_body: blank.html
+exclude: ["DESCRIPTION", "angular-app"]
