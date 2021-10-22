@@ -4,6 +4,13 @@ To make change, edit the Rmd (or yml/css) files and commit. The site gets automa
 
 ## Building locally
 
+Before anything, make sure you have fetched the `angular-app` submodule:
+
+```sh
+git submodule init
+git submodule update
+```
+
 ### Installing dependencies
 
 In a R console:
@@ -12,11 +19,11 @@ In a R console:
 remotes::install_deps()
 ```
 
-For the Angular app, run in a terminal:
+For the Angular app, 
 
-```sh
-npm install
-```
+1. [Install Node](https://nodejs.dev/learn/how-to-install-nodejs)
+1. Move to the `angular-app` folder (e.g., by running `cd angular-app` in your terminal)
+1. Run `npm install` in a terminal
 
 ### Rendering the HTML files
 
