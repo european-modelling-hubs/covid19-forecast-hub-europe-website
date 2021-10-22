@@ -32,7 +32,8 @@ In a terminal (**not** the R console)
 ```sh
 Rscript -e "rmarkdown::render_site()"
 cd angular-app
-ng build --index=../_site/visualisation.html --output-path=../_site/ --delete-output-path=false --base-href="/"
+ng build --index=../_site/visualisation.html --output-path=../_site/ --delete-output-path=false
+ng serve --serve-path=../_site/
 ```
 
 ### Viewing the result
