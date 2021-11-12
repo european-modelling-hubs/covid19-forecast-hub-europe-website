@@ -1,23 +1,73 @@
 name: Render and Deploy RMarkdown Website
-'on': push
+on:
+  push:
+    branches: main
+  schedule:
+    - cron: "0 16 * * 0"
+    - cron: "45 11 * * 2"
+
 jobs:
-  build:
-    runs-on: ubuntu-18.04
+  render-reports:
+    runs-on: ubuntu-20.04
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@master
-      - name: Install Package Dependencies
-        run: |-
-          Rscript -e "install.packages('remotes', repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
-          Rscript -e "remotes::install_deps(dependencies = TRUE, repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
+      - uses: actions/checkout@v2
+        with:
+          repository: 'epiforecasts/covid19-forecast-hub-europe'
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+
+      - uses: r-lib/actions/setup-r@v1
+        with:
+          use-public-rspm: true
+
+      - name: Install system dependencies
+        run: sudo apt-get install -y libssl-dev libcurl4-openssl-dev pandoc
+
+      - name: Install R dependencies
+        run: |
+          install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "readr", "rlang"))
+          remotes::install_github("reichlab/covidHubUtils")
+          remotes::install_github("epiforecasts/scoringutils@limit-viz")
+          remotes::install_github("epiforecasts/EuroForecastHub")
+        shell: Rscript {0}
+
+      - name: Create country reports
+        run: Rscript 'code/reports/compile-country-reports.r'
+
+      - name: Create model reports
+        run: Rscript 'code/reports/compile-model-reports.r'
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: md-reports
+          retention-days: 5
+          path: html
+
+  render-website:
+    needs: render-reports
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: md-reports
+
+      - uses: r-lib/actions/setup-pandoc@v1
+
+      - uses: r-lib/actions/setup-r@v1
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v1
+        with:
+          extra-packages: rmarkdown
+
       - name: Render Site
-        run: |-
-          Rscript -e "rmarkdown::render_site(encoding = 'UTF-8')"
-          echo covid19forecasthub.eu > _site/CNAME
+        run: Rscript -e "rmarkdown::render_site(encoding = 'UTF-8')"
+
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: maxheld83/ghpages@v0.2.0
         env:
           BUILD_DIR: _site
           GH_PAT: ${{ secrets.GH_PAT }}
-    container: rocker/verse:latest
