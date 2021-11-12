@@ -26,7 +26,7 @@ jobs:
         env:
           GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "readr", "rlang"))
+          install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "readr", "rlang", "tidyr", "forcats", "lemon", "scales", "rmdpartials", "RColorBrewer", "cowplot"))
           remotes::install_github("reichlab/covidHubUtils")
           remotes::install_github("epiforecasts/scoringutils@limit-viz")
           remotes::install_github("epiforecasts/EuroForecastHub")
