@@ -23,6 +23,8 @@ jobs:
         run: sudo apt-get install -y libssl-dev libcurl4-openssl-dev pandoc
 
       - name: Install R dependencies
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
           install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "readr", "rlang"))
           remotes::install_github("reichlab/covidHubUtils")
