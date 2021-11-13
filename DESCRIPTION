@@ -8,6 +8,7 @@ Imports:
   yaml,
   purrr,
   fs,
+  gh,
   dplyr
 License: MIT
 Encoding: UTF-8
