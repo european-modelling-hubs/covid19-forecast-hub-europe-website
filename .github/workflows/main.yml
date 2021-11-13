@@ -44,10 +44,8 @@ jobs:
           name: md-reports
           retention-days: 5
           path: |
-            code/reports/country/
-            !code/reports/country/country-report.Rmd
-            code/reports/models/
-            !code/reports/models/model-report.Rmd
+            code/reports/
+            !code/reports/**.Rmd
 
   render-website:
     needs: render-reports
