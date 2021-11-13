@@ -8,7 +8,7 @@ navbar:
       href: visualisation.html
     - text: "Reports"
       icon: fa-file-alt
-      href: model-report-EuroCOVIDhub-ensemble.html
+      href: reports.html
     - text: "Community"
       icon: fa-users
       href: community.html
