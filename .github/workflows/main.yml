@@ -1,5 +1,6 @@
 name: Render and Deploy RMarkdown Website
 on:
+  workflow_dispatch:
   push:
     branches: main
   schedule:
