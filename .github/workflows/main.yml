@@ -1,51 +1,10 @@
 name: Render and Deploy RMarkdown Website
 on:
   workflow_dispatch:
-  push:
-    branches: main
-  schedule:
-    - cron: "0 16 * * 0"
-    - cron: "45 11 * * 2"
+  # push:
+  #   branches: main
 
 jobs:
-  render-reports:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          repository: 'epiforecasts/covid19-forecast-hub-europe'
-          token: ${{ secrets.API_TOKEN_GITHUB }}
-
-      - uses: r-lib/actions/setup-r@v1
-        with:
-          use-public-rspm: true
-
-      - name: Install system dependencies
-        run: sudo apt-get install -y libssl-dev libcurl4-openssl-dev pandoc
-
-      - name: Install R dependencies
-        env:
-          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          install.packages(c("remotes", "here", "rmarkdown", "lubridate", "ggplot2", "dplyr", "DT", "knitr", "readr", "rlang", "tidyr", "forcats", "lemon", "scales", "rmdpartials", "RColorBrewer", "cowplot"))
-          remotes::install_github("reichlab/covidHubUtils")
-          remotes::install_github("epiforecasts/scoringutils@limit-viz")
-          remotes::install_github("epiforecasts/EuroForecastHub")
-        shell: Rscript {0}
-
-      - name: Create country reports
-        run: Rscript 'code/reports/compile-country-reports.r'
-
-      - name: Create model reports
-        run: Rscript 'code/reports/compile-model-reports.r'
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: html-reports
-          retention-days: 5
-          path: |
-            html/
-
   render-website:
     needs: render-reports
     runs-on: ubuntu-20.04
@@ -54,7 +13,12 @@ jobs:
 
       - uses: actions/download-artifact@v2
         with:
-          name: html-reports
+          name: country-reports
+          path: reports
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: model-reports
           path: reports
 
       - uses: r-lib/actions/setup-pandoc@v1
