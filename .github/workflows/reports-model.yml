@@ -28,7 +28,7 @@ jobs:
           remotes::install_github("epiforecasts/EuroForecastHub")
         shell: Rscript {0}
 
-     - name: Create model reports
+      - name: Create model reports
         run: Rscript 'code/reports/compile-model-reports.r'
 
       - uses: actions/upload-artifact@v2
