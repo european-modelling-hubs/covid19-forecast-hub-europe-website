@@ -6,7 +6,9 @@ output:
 ---
 
 ```{r iframe, results = 'asis', echo = FALSE}
-cat(paste0("<iframe width=\"100%\" style=\"height: 100vh;\"",
+cat(paste0("<iframe width=\"100%\" style=\"height: calc(100vh-66px);\"",
+           # 66px of height has to be kept for the navbar (+ its margin) to 
+           # avoid the double scrollbar
            "id=\"reportFrame\" src=\"reports/model-report-EuroCOVIDhub-ensemble.html\"\n"))
 cat("  frameborder=\"0\">\n")
 cat("</iframe>\n")
