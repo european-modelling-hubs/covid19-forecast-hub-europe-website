@@ -6,6 +6,12 @@ output:
     toc_float: false
 ---
 
+<style>
+  .title {
+    display: none;
+  }
+</style>
+
 ```{r iframe, results = 'asis', echo = FALSE}
 cat(paste0("<iframe width=\"100%\" style=\"height: calc(100vh - 107px);\"",
            # Some height has to be kept for the navbar (+ its margin) to 
