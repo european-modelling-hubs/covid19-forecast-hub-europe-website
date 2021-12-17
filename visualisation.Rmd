@@ -72,6 +72,10 @@ window.onresize = resize_iframe();
 Please be aware of the [limitations](background.html) when interpreting the forecasts. We recommend to focus on the ensemble which would be expected to give the most reliable forecasts. For horizons beyond one week case forecasts in particular can rapidly become unreliable, especially in times of changing non-pharmaceutical or dominant variants. The individual models that constitute the ensemble have been contributed by independent teams. They are shown for transparency but should not be taken on their own without fully acknowledging their assumptions and limitations and engaging with the listed authors.
 </p>
 
+<div class="alert alert-warning">
+  <strong>Warning!</strong> Most models don't take emerging variants (such as omicron) into account.
+</div>
+
 <div class="row">
   <iframe width="100%"
     style="height: calc(100vh - 237px);"
