@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: 'epiforecasts/covid19-forecast-hub-europe'
           token: ${{ secrets.API_TOKEN_GITHUB }}
+          repository: 'covid19-forecast-hub-europe/covid19-forecast-hub-europe'
 
       - uses: r-lib/actions/setup-r@v1
         with:
