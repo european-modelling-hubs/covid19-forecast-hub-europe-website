@@ -19,7 +19,7 @@ navbar:
       icon: fa-envelope
       href: contact.html
   right:
-    - href: https://github.com/epiforecasts/covid19-forecast-hub-europe
+    - href: https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe
       icon: fab fa-github
 output:
   html_document:
