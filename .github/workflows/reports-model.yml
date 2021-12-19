@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.API_TOKEN_GITHUB }}
+          token: ${{ secrets.FORECASTHUB_TOKEN }}
           repository: 'covid19-forecast-hub-europe/covid19-forecast-hub-europe'
 
       - uses: r-lib/actions/setup-r@v1
