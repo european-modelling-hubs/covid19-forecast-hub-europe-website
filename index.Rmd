@@ -32,7 +32,7 @@ Short-term forecasts of Covid-19 cases and deaths across Europe, created by a mu
 
 ::: {.column width="48%"}
 
-![European Forecast hub logo](images/logo.png)
+![European Forecast hub logo](images/logo.svg)
 
 :::
 
