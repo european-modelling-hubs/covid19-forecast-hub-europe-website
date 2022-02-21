@@ -45,9 +45,10 @@ jobs:
       - name: Render Site
         run: Rscript -e "rmarkdown::render_site(encoding = 'UTF-8')"
 
-      - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
-        uses: maxheld83/ghpages@v0.2.0
-        env:
-          BUILD_DIR: _site
-          GH_PAT: ${{ secrets.GH_PAT }}
+      - name: Deploy to GitHub pages 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: _site
+          single-commit: true
+          clean: true
