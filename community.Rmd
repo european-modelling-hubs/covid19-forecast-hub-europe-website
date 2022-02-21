@@ -53,7 +53,7 @@ team_df  %>%
 
 # Presentations
 
-The ECDC hosts weekly calls which any forecasting team is welcome to join. Each week a different team is invited to present and discuss forecasting methods. Slides and extra content provided by the teams can be accessed below:
+The ECDC hosts weekly calls which any forecasting team is welcome to join. Each week a different team is invited to present and discuss forecasting methods. Slides and extra content provided by the teams can be accessed below. Please note that slides might be released under a different license than the MIT license used for the rest of this website:
 
 ```{r presentations, results='asis', echo=FALSE}
 library("httr")
