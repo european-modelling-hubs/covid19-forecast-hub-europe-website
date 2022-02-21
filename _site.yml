@@ -32,3 +32,4 @@ output:
       after_body: blank.html
 exclude:
   - "DESCRIPTION"
+  - "LICENSE.md"
