@@ -56,7 +56,7 @@ window.onresize = resize_iframe();
 
   eventer(messageEvent, function (e) {
     
-    if (e.origin !== 'https://epiforecasts.io') {
+    if (e.origin !== 'https://covid19-forecast-hub-europe.github.io') {
       return;
     }
     
