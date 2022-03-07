@@ -80,7 +80,7 @@ Please be aware of the [limitations](background.html) when interpreting the fore
   <iframe width="100%"
     style="height: calc(100vh - 237px);"
     id="vizFrame"
-    src="https://epiforecasts.io/covid19-forecast-hub-europe-viz/"
+    src="https://covid19-forecast-hub-europe.github.io/covid19-forecast-hub-europe-viz/"
     frameborder="0"
     scrolling="no">
   </iframe>
