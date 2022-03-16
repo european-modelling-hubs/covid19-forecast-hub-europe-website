@@ -1,0 +1,37 @@
+---
+title: "Citations & re-uses"
+output:
+  html_document:
+    toc: false
+    toc_float: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+bibfile <- "papers.bib"
+```
+
+Please [get in touch](contact.html) if you know or published an article using
+data from the European Covid-19 Forecast Hub or mentioning it as a public health
+tool.
+
+```{r, results='asis'}
+library(magrittr)
+b <- tools::bibstyle(
+  "by_year", 
+  fmtPrefix = function(paper) "-", 
+  .init = TRUE, 
+  sortKeys = function(refs) rank(purrr::map_chr(unclass(refs), "year"))
+)
+
+bibtex::read.bib(bibfile) %>%
+  purrr::keep(~ attr(unclass(.x)[[1]], "bibtype") == "Article") %>%
+  sort(.bibstyle = "by_year", decreasing = TRUE) %>%
+  purrr::map_chr(format, "html", .bibstyle = "by_year") %>%
+  paste(collapse = "") %>%
+  cat()
+```
+
