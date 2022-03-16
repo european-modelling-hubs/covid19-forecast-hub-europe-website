@@ -15,6 +15,9 @@ navbar:
     - text: "Background"
       icon: fa-info-circle
       href: background.html
+    - text: "Citations & re-uses"
+      icon: fa-newspaper
+      href: papers.html
     - text: "Contact"
       icon: fa-envelope
       href: contact.html
