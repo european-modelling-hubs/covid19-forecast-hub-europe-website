@@ -14,8 +14,9 @@ knitr::opts_chunk$set(echo = FALSE)
 bibfile <- "papers.bib"
 ```
 
-Please get in touch if you know or published an article using data from the
-European Covid-19 Forecast Hub or mentioning it as a public health tool.
+Please [get in touch](contact.html) if you know or published an article using
+data from the European Covid-19 Forecast Hub or mentioning it as a public health
+tool.
 
 ```{r, results='asis'}
 library(magrittr)
@@ -33,3 +34,4 @@ bibtex::read.bib(bibfile) %>%
   paste(collapse = "") %>%
   cat()
 ```
+
