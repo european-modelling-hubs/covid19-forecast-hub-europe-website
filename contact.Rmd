@@ -5,4 +5,29 @@ output:
     toc: false
     toc_float: false
 ---
-To get in touch, send us an email to [mail@covid19forecasthub.eu](mailto:mail@covid19forecasthub.eu).
+
+### Stay up to date on Hub news
+
+For updates on the Forecast Hub, including upcoming meetings and new research, all are welcome to join the European Forecast Hub [mailing list](https://groups.google.com/u/0/g/euro-covid19-forecast-hub). Please include your name and a brief sentence about your interest in the Hub (so that we can exclude bots). 
+
+### New enquiries
+
+We welcome all enquiries about the European Forecast Hub. We are particularly keen to hear from modellers interested in participating. 
+
+To get in touch, please:
+
+- Send us an email at [mail@covid19forecasthub.eu](mailto:mail@covid19forecasthub.eu)
+
+- Open a [Github Issue](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe/issues/new)
+
+### Existing Hub participants
+
+Please get in touch to join our [Slack](https://slack.com/) workspace, where we encourage Hub participants and users to discuss modelling work.
+
+For technical issues using the Forecast Hub (including this website) please open an Issue in our [Github repository](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe/issues/new).
+
+### About us
+
+Both the European Forecast and [Scenario](https://covid19scenariohub.eu/index.html) Hubs are run in collaboration between the [Epiforecasts team](http://epiforecasts.io/), part of the [Centre for Mathematical Modelling of Infectious Diseases](http://cmmid.github.io/topics/covid19) at the [London School of Hygiene & Tropical Medicine](http://www.lshtm.ac.uk), and the [European Centre for Disease Control and Prevention (ECDC)](http://ecdc.europa.eu). 
+
+The LSHTM team working on Hub research and development includes [Katharine Sherratt](https://epiforecasts.io/people.html#katharine-sherratt) ([@kathsherratt](https://twitter.com/kathsherrratt)), [Hugo Gruson](https://epiforecasts.io/people.html#hugo-gruson) ([@grusonh](https://twitter.com/grusonh)), and [Sebastian Funk](https://epiforecasts.io/people.html#sebastian-funk) ([@sbfnk](https://twitter.com/sbfnk)).
