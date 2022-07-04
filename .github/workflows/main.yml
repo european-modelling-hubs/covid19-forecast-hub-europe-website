@@ -1,13 +1,6 @@
 name: Render and Deploy RMarkdown Website
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - "Create country reports"
-      - "Create model reports"
-    branches: [main]
-    types:
-      - completed
   push:
     branches: main
 
