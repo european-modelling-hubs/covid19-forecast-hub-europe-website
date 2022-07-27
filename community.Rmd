@@ -26,7 +26,7 @@ team_df <-
         ) %>%
   pluck("tree") %>%
   keep(~ .x$type == "blob" &&
-         grepl("data-processed/(.*)/metadata-\\1", .x$path)) %>%
+         grepl("metadata/", .x$path)) %>%
   map_chr(~ glue::glue(
                     paste0("https://raw.githubusercontent.com/{github_repo}/",
                            "{branch}/{.x$path}")
