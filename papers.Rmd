@@ -28,7 +28,7 @@ b <- tools::bibstyle(
 )
 
 bibtex::read.bib(bibfile) %>%
-  purrr::keep(~ attr(unclass(.x)[[1]], "bibtype") == "Article") %>%
+  purrr::keep(~ attr(unclass(.x)[[1]], "bibtype") %in% c("Article", "PhdThesis")) %>%
   sort(.bibstyle = "by_year", decreasing = TRUE) %>%
   purrr::map_chr(format, "html", .bibstyle = "by_year") %>%
   paste(collapse = "") %>%
