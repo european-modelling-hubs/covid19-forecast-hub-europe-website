@@ -32,19 +32,27 @@ team_df <-
                            "{branch}/{.x$path}")
                   )) %>%
   set_names() %>%
-  imap_dfr(~ c(link = .y, read_yaml(.x))) %>%
-  select(link, model_abbr, team_name, website_url, methods) %>%
+  map(read_yaml) %>%
+  imap_dfr(~ list(
+    link = .y,
+    authors = glue::glue_collapse(purrr::map(.x$model_contributors, "name"), sep = ", "),
+    model_abbr = .x$model_abbr,
+    website_url = .x$website_url,
+    team_name = .x$team_name,
+    methods = .x$methods
+  )) %>%
   mutate(
     md_link = glue::glue("[Metadata]({link})"),
-    model_abbr = glue::glue("[{model_abbr}]({website_url})"),
-    .keep = "unused"
+    model_abbr = glue::glue("[{model_abbr}]({website_url})")
   ) %>%
+  select(authors, model_abbr, team_name, md_link, methods) %>%
   arrange(tolower(model_abbr))
 
 team_df  %>%
   relocate(
     "Model name" = model_abbr,
-    "Affiliation" = team_name,
+    "Authors" = authors,
+    "Team" = team_name,
     "Methods" = methods,
     "Complete metadata" = md_link
   ) %>%
