@@ -73,7 +73,7 @@ Please be aware of the [limitations](background.html) when interpreting the fore
 </p>
 
 <div class="alert alert-warning">
-  <strong>Warning!</strong> The visualisation app is currently slow to load. We are working to fix this. In the meantime, you may have to wait a few minutes until the app appears.
+  <strong>Warning!</strong> Many countries are undergoing changes in testing criteria and reporting procedures. We recommend focusing on trends rather than absolute numbers when interpreting the forecasts.
 </div>
 
 <div class="row">
