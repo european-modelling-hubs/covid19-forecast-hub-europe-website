@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Weekly reports (2022-08-08)</title>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<link href="libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.21/datatables.js"></script>
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="https://covid19forecasthub.eu/css/styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Weekly reports (2022-08-08)</h1>
+
+</div>
+
+
+<!--- Fetch various values from the config file --->
+<!--- Fetch various values from the config file --->
+<div id="section" class="section level2 unlisted unnumbered">
+<h2></h2>
+<p>Choose the type of report you wish do view using the dropdown menu. The Model reports shows the recent forecasts and performance of the ensemble or individual models, whereas the Country reports shows model-by-model performance, either overall or by country. The reports get updated every Tuesday.</p>
+<div class="dropdown" style="display:inline-block">
+<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Model reports ▼</button>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<li class="dropdown-item">
+<a href="model-report-AMM-EpiInvert.html">AMM-EpiInvert</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-BIOCOMSC-Gompertz.html">BIOCOMSC-Gompertz</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-bisop-seirfilter.html">bisop-seirfilter</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-bisop-seirfilterlite.html">bisop-seirfilterlite</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-CovidMetrics-epiBATS.html">CovidMetrics-epiBATS</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-DirkBeckmann-Gompertz.html">DirkBeckmann-Gompertz</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-DSMPG-bayes.html">DSMPG-bayes</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-ECDC-hosp_model.html">ECDC-hosp_model</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-arimareg.html">epiforecasts-arimareg</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-caseconv.html">epiforecasts-caseconv</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-EpiExpert_direct.html">epiforecasts-EpiExpert_direct</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-EpiExpert_Rt.html">epiforecasts-EpiExpert_Rt</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-EpiExpert.html">epiforecasts-EpiExpert</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-EpiNow2.html">epiforecasts-EpiNow2</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-tsensemble.html">epiforecasts-tsensemble</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-weeklygrowth.html">epiforecasts-weeklygrowth</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiMOX-SUIHTER.html">epiMOX-SUIHTER</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-EuroCOVIDhub-baseline.html">EuroCOVIDhub-baseline</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-EuroCOVIDhub-ensemble.html">EuroCOVIDhub-ensemble</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-FIAS_FZJ-Epi1Ger.html">FIAS_FZJ-Epi1Ger</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-fohm-c19inbel.html">fohm-c19inbel</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-GoeWroc-BaseBayes.html">GoeWroc-BaseBayes</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-HZI-AgeExtendedSEIR.html">HZI-AgeExtendedSEIR</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-ICM-agentModel.html">ICM-agentModel</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-IEM_Health-CovidProject.html">IEM_Health-CovidProject</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-ILM-EKF.html">ILM-EKF</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-Imperial-DeCa.html">Imperial-DeCa</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-Imperial-RtI0.html">Imperial-RtI0</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-Imperial-sbkp.html">Imperial-sbkp</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-itwm-dSEIR.html">itwm-dSEIR</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-ITWW-county_repro.html">ITWW-county_repro</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-JBUD-HMXK.html">JBUD-HMXK</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-Karlen-pypm.html">Karlen-pypm</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-KITmetricslab-bivar_branching.html">KITmetricslab-bivar_branching</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-LANL-GrowthRate.html">LANL-GrowthRate</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-LeipzigIMISE-SECIR.html">LeipzigIMISE-SECIR</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-MIMUW-StochSEIR.html">MIMUW-StochSEIR</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-MIT_CovidAnalytics-DELPHI.html">MIT_CovidAnalytics-DELPHI</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-MOCOS-agent1.html">MOCOS-agent1</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-MUNI_DMS-SEIAR.html">MUNI_DMS-SEIAR</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-MUNI-ARIMA.html">MUNI-ARIMA</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-MUNI-LaggedRegARIMA.html">MUNI-LaggedRegARIMA</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-MUNI-VAR.html">MUNI-VAR</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-PL_GRedlarski-DistrictsSum.html">PL_GRedlarski-DistrictsSum</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-prolix-euclidean.html">prolix-euclidean</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-RobertWalraven-ESG.html">RobertWalraven-ESG</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-SDSC_ISG-TrendModel.html">SDSC_ISG-TrendModel</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-Statgroup19-richards.html">Statgroup19-richards</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-Statgroup19-spatialrichards.html">Statgroup19-spatialrichards</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UB-BSLCoV.html">UB-BSLCoV</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UC3M-EpiGraph.html">UC3M-EpiGraph</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-ULZF-SEIRC19SI.html">ULZF-SEIRC19SI</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UMass-MechBayes.html">UMass-MechBayes</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UMass-SemiMech.html">UMass-SemiMech</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UNED-PreCoV2.html">UNED-PreCoV2</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UNIPV-BayesINGARCHX.html">UNIPV-BayesINGARCHX</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UpgUmibUsi-MultiBayes.html">UpgUmibUsi-MultiBayes</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-USC-SIkJalpha.html">USC-SIkJalpha</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-USyd-OneModelMan.html">USyd-OneModelMan</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UVA-Ensemble.html">UVA-Ensemble</a>
+</li>
+</ul>
+</div>
+<div class="dropdown" style="display:inline-block">
+<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Country reports ▼</button>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<li class="dropdown-item">
+<a href="country-report-Overall.html">Overall</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Austria.html">Austria</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Belgium.html">Belgium</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Bulgaria.html">Bulgaria</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Croatia.html">Croatia</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Cyprus.html">Cyprus</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Czechia.html">Czechia</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Denmark.html">Denmark</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Estonia.html">Estonia</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Finland.html">Finland</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-France.html">France</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Germany.html">Germany</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Greece.html">Greece</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Hungary.html">Hungary</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Iceland.html">Iceland</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Ireland.html">Ireland</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Italy.html">Italy</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Latvia.html">Latvia</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Liechtenstein.html">Liechtenstein</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Lithuania.html">Lithuania</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Luxembourg.html">Luxembourg</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Malta.html">Malta</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Netherlands.html">Netherlands</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Norway.html">Norway</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Poland.html">Poland</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Portugal.html">Portugal</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Romania.html">Romania</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Slovakia.html">Slovakia</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Slovenia.html">Slovenia</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Spain.html">Spain</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Sweden.html">Sweden</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Switzerland.html">Switzerland</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-United Kingdom.html">United Kingdom</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="european-covid-19-forecast-hub-evaluation-report-for-muni-arima" class="section level1">
+<h1>European COVID-19 Forecast Hub Evaluation Report for MUNI-ARIMA</h1>
+<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
+<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
+<div id="section-1" class="section level2 unlisted unnumbered">
+<h2></h2>
+<!--- Load forecast scores -->
+<!--- Evaluate and score forecasts -->
+<!--- Chunk to filter data and scores to keep only the relevant locations, horizons and target varaibles. Is is separated from the global scoring step
+so that we can cache the loading and scoring step.. -->
+<!--- Chunk to filter data and scores to keep only the relevant locations, horizons and target varaibles. Is is separated from the global scoring step
+so that we can cache the loading and scoring step.. -->
+</div>
+<div id="section-2" class="section level2 unlisted unnumbered">
+<h2></h2>
+<!--- Visualise the latest forecasts. -->
+<!-- Visualisation of forecasts (cases or deaths across time) for multiple
+forecasting dates. -->
+</div>
+<div id="latest-forecasts" class="section level2 tabset tabset_fade">
+<h2>Latest forecasts</h2>
+<p>Forecasts of cases/deaths per week per 100,000. Click the <code>Forecast</code> tab above to view all past forecasts.</p>
+<div id="cases" class="section level3">
+<h3>Cases</h3>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/prediction-plots-1.png" width="100%" /></p>
+</div>
+<div id="deaths" class="section level3">
+<h3>Deaths</h3>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/prediction-plots-2.png" width="100%" /></p>
+</div>
+<div id="hospitalisations" class="section level3">
+<h3>Hospitalisations</h3>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/prediction-plots-3.png" width="100%" /></p>
+</div>
+</div>
+<div id="section-3" class="section level2 unlisted unnumbered">
+<h2></h2>
+<!-- Focus on 10 week scores. -->
+<!-- Visualisation of model scores. -->
+</div>
+<div id="predictive-performance" class="section level2 tabset tabset-fade">
+<h2>Predictive performance</h2>
+<p>Skill is shown as weighted interval score.</p>
+<div id="cases-1" class="section level3 tabset tabset-fade">
+<h3>Cases</h3>
+<div id="week-ahead-horizon" class="section level4">
+<h4>1 week ahead horizon</h4>
+<div id="overall-predictive-performance" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>The table shows the skill of the MUNI-ARIMA model relative to the baseline (<code>vs. baseline</code>) and the ensemble model (<code>vs. ensemble</code>) for the past 10 weeks in terms of the Weighted Interval Score (<code>WIS</code>) and Absolute Error (<code>AE</code>). Values less than 1 indicate the model performs better than the model it is being compared with, and values greater than 1 that it performs worse. WIS values are only shown if all 23 quantiles are provided.</p>
+<div id="htmlwidget-43be9b5e11385276b883" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-43be9b5e11385276b883">{"x":{"filter":"none","vertical":false,"data":[["Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Latvia","Liechtenstein","Lithuania","Luxembourg","Malta","Netherlands","Norway","Poland","Portugal","Romania","Slovakia","Slovenia","Spain","Sweden","Switzerland","United Kingdom"],[0.58,0.87,0.61,0.76,0.79,0.8,0.84,1.17,1.3,1.14,0.62,0.68,0.85,0.69,0.9,0.51,0.97,1.25,0.54,1.13,0.51,0.66,0.9,0.36,1.49,1.17,1.09,0.84,1.09,0.63,0.56,1.17],[0.75,0.98,0.9,0.81,0.58,0.95,0.88,1.33,1.19,1.39,0.91,0.84,1.27,0.61,0.78,0.98,1.11,1.39,0.86,1.1,0.54,0.87,0.78,0.82,1.84,1.15,0.96,0.84,0.96,1.05,0.82,1.21],[0.63,0.91,0.63,0.84,0.85,0.88,0.98,1.05,1.23,1.08,0.71,0.69,0.93,0.72,0.94,0.54,1.07,1.28,0.46,1.2,0.52,0.67,1.24,0.32,1.37,1.13,1.1,0.87,1.06,0.76,0.59,1.05],[0.78,0.94,0.78,0.89,0.55,0.89,1.01,1.18,1.13,1.3,0.87,0.73,1.06,0.63,0.7,1.13,1.16,1.38,0.79,0.97,0.53,0.94,0.82,0.52,1.41,0.99,0.96,0.8,0.95,0.69,0.74,1.04]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Location<\/th>\n      <th>WIS vs. baseline<\/th>\n      <th>WIS vs. ensemble<\/th>\n      <th>AE vs. baseline<\/th>\n      <th>AE vs. ensemble<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"info":false,"dom":"Bfrtip","columnDefs":[{"targets":[1,2,3,4],"render":"function(data, type, row) {\n  if(type === 'sort' && data === null) {\n    return Infinity;\n  }\n  return data;\n}"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'90%'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'90%'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'90%'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'90%'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-size':'90%'});\n}"}},"evals":["options.columnDefs.0.render","options.rowCallback"],"jsHooks":[]}</script>
+</details>
+</div>
+<div id="performance-over-time" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/b4bb9d7e98_score-plots-1.png" width="100%" /></p>
+</div>
+</div>
+<div id="weeks-ahead-horizon" class="section level4">
+<h4>2 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-1" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>The table shows the skill of the MUNI-ARIMA model relative to the baseline (<code>vs. baseline</code>) and the ensemble model (<code>vs. ensemble</code>) for the past 10 weeks in terms of the Weighted Interval Score (<code>WIS</code>) and Absolute Error (<code>AE</code>). Values less than 1 indicate the model performs better than the model it is being compared with, and values greater than 1 that it performs worse. WIS values are only shown if all 23 quantiles are provided.</p>
+<div id="htmlwidget-d410f679c5b0d2878cf8" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d410f679c5b0d2878cf8">{"x":{"filter":"none","vertical":false,"data":[["Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Latvia","Liechtenstein","Lithuania","Luxembourg","Malta","Netherlands","Norway","Poland","Portugal","Romania","Slovakia","Slovenia","Spain","Sweden","Switzerland","United Kingdom"],[0.73,0.76,0.67,0.7,0.9,0.69,0.84,1.41,1.01,1.1,0.81,0.67,0.72,0.81,1.07,0.71,0.83,1.27,0.53,0.91,0.65,0.66,0.86,0.48,0.74,0.88,0.95,0.83,0.81,0.71,0.82,1.05],[0.7,0.7,0.89,0.73,0.68,0.93,0.82,1.55,0.94,1.11,0.92,1.03,0.96,0.67,0.86,1,0.99,1.15,0.85,0.88,0.65,0.85,0.83,0.81,1.14,0.93,0.98,0.82,0.69,1.37,0.92,0.93],[0.77,0.8,0.71,0.69,0.95,0.79,0.99,1.34,0.96,1.07,0.86,0.69,0.73,0.9,1.02,0.74,0.87,1.24,0.37,0.92,0.68,0.66,1,0.47,0.72,0.82,0.96,0.87,0.8,1.19,0.87,0.94],[0.74,0.78,0.89,0.73,0.73,0.75,0.81,1.46,0.89,1,0.95,0.8,0.86,0.79,0.84,1.03,0.93,1.13,0.62,0.8,0.65,0.86,0.8,0.67,1.03,1,0.96,0.81,0.67,1.18,0.9,0.9]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Location<\/th>\n      <th>WIS vs. baseline<\/th>\n      <th>WIS vs. ensemble<\/th>\n      <th>AE vs. baseline<\/th>\n      <th>AE vs. ensemble<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"info":false,"dom":"Bfrtip","columnDefs":[{"targets":[1,2,3,4],"render":"function(data, type, row) {\n  if(type === 'sort' && data === null) {\n    return Infinity;\n  }\n  return data;\n}"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'90%'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'90%'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'90%'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'90%'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-size':'90%'});\n}"}},"evals":["options.columnDefs.0.render","options.rowCallback"],"jsHooks":[]}</script>
+</details>
+</div>
+<div id="performance-over-time-1" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/1b9754055c_score-plots-10-1.png" width="100%" /></p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-1" class="section level4">
+<h4>3 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-2" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>The table shows the skill of the MUNI-ARIMA model relative to the baseline (<code>vs. baseline</code>) and the ensemble model (<code>vs. ensemble</code>) for the past 10 weeks in terms of the Weighted Interval Score (<code>WIS</code>) and Absolute Error (<code>AE</code>). Values less than 1 indicate the model performs better than the model it is being compared with, and values greater than 1 that it performs worse. WIS values are only shown if all 23 quantiles are provided.</p>
+<div id="htmlwidget-6a5ea24e30cec311b983" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6a5ea24e30cec311b983">{"x":{"filter":"none","vertical":false,"data":[["Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Latvia","Liechtenstein","Luxembourg","Malta","Netherlands","Norway","Poland","Portugal","Romania","Slovakia","Slovenia","Spain","Sweden","Switzerland","United Kingdom"],[0.76,0.88,0.56,0.7,1,0.73,0.91,1.6,1.46,0.94,0.75,0.89,0.88,0.94,1.17,0.96,0.82,1.14,0.93,0.78,0.79,0.85,0.65,0.75,0.97,0.95,0.86,0.93,0.82,0.98,1.08],[0.63,0.64,0.86,0.65,0.74,1,0.78,1.65,1.3,0.78,0.76,0.96,1.01,0.69,0.88,0.96,1,0.86,0.85,0.67,0.91,0.81,1,0.96,0.82,0.95,0.77,0.7,1.67,0.89,0.84],[0.76,0.95,0.47,0.55,1.02,0.66,0.99,1.89,1.35,0.88,0.77,0.91,0.86,1.05,1.11,1.03,0.85,1.1,0.97,0.81,0.8,1.16,0.59,0.79,1.01,1.12,0.91,0.93,1.49,0.96,0.94],[0.75,0.7,0.85,0.57,0.81,0.71,0.73,1.67,1.21,0.69,0.76,0.93,0.93,0.81,0.88,0.94,0.94,0.79,0.84,0.62,0.96,0.8,0.92,0.89,0.95,1.01,0.76,0.7,1.51,0.95,0.93]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Location<\/th>\n      <th>WIS vs. baseline<\/th>\n      <th>WIS vs. ensemble<\/th>\n      <th>AE vs. baseline<\/th>\n      <th>AE vs. ensemble<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"info":false,"dom":"Bfrtip","columnDefs":[{"targets":[1,2,3,4],"render":"function(data, type, row) {\n  if(type === 'sort' && data === null) {\n    return Infinity;\n  }\n  return data;\n}"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'90%'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'90%'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'90%'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'90%'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-size':'90%'});\n}"}},"evals":["options.columnDefs.0.render","options.rowCallback"],"jsHooks":[]}</script>
+</details>
+</div>
+<div id="performance-over-time-2" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/ee787cbe2d_score-plots-13-1.png" width="100%" /></p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-2" class="section level4">
+<h4>4 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-3" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>The table shows the skill of the MUNI-ARIMA model relative to the baseline (<code>vs. baseline</code>) and the ensemble model (<code>vs. ensemble</code>) for the past 10 weeks in terms of the Weighted Interval Score (<code>WIS</code>) and Absolute Error (<code>AE</code>). Values less than 1 indicate the model performs better than the model it is being compared with, and values greater than 1 that it performs worse. WIS values are only shown if all 23 quantiles are provided.</p>
+<div id="htmlwidget-5e60e59ca2bff28f1239" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5e60e59ca2bff28f1239">{"x":{"filter":"none","vertical":false,"data":[["Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Latvia","Liechtenstein","Luxembourg","Malta","Netherlands","Norway","Poland","Portugal","Slovakia","Slovenia","Spain","Sweden","Switzerland","United Kingdom"],[0.85,0.94,0.66,0.79,1.05,0.63,1.05,1.23,1.36,1.04,0.69,0.92,0.9,1.04,1.14,0.98,0.9,1.25,0.93,0.85,0.82,0.78,0.85,0.66,1.11,0.92,0.97,1.02,1,1.02],[0.63,0.66,0.88,0.6,0.78,1.17,0.81,1.19,1.55,0.79,0.65,1.16,0.87,0.71,0.83,0.82,0.99,0.99,0.84,0.67,0.88,0.72,1.09,1.16,1.19,0.8,0.73,2,0.79,0.71],[0.79,1.02,0.5,0.67,1.03,0.44,1.2,1.31,1.29,0.96,0.64,0.92,0.88,1.13,1.14,1.04,0.87,1.32,0.94,0.85,0.96,1.09,0.8,0.7,1.18,0.99,0.94,1.95,0.98,0.95],[0.76,0.78,0.81,0.61,0.87,0.76,0.75,1.14,1.33,0.72,0.66,0.97,0.89,0.86,0.86,0.82,0.91,1.14,0.84,0.61,0.93,0.67,1.07,1.13,1.16,0.88,0.74,2.05,0.87,0.77]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Location<\/th>\n      <th>WIS vs. baseline<\/th>\n      <th>WIS vs. ensemble<\/th>\n      <th>AE vs. baseline<\/th>\n      <th>AE vs. ensemble<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"info":false,"dom":"Bfrtip","columnDefs":[{"targets":[1,2,3,4],"render":"function(data, type, row) {\n  if(type === 'sort' && data === null) {\n    return Infinity;\n  }\n  return data;\n}"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'90%'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'90%'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'90%'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'90%'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-size':'90%'});\n}"}},"evals":["options.columnDefs.0.render","options.rowCallback"],"jsHooks":[]}</script>
+</details>
+</div>
+<div id="performance-over-time-3" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/6b0217dc03_score-plots-16-1.png" width="100%" /></p>
+</div>
+</div>
+</div>
+<div id="deaths-1" class="section level3 tabset tabset-fade">
+<h3>Deaths</h3>
+<div id="week-ahead-horizon-1" class="section level4">
+<h4>1 week ahead horizon</h4>
+<div id="overall-predictive-performance-4" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>The table shows the skill of the MUNI-ARIMA model relative to the baseline (<code>vs. baseline</code>) and the ensemble model (<code>vs. ensemble</code>) for the past 10 weeks in terms of the Weighted Interval Score (<code>WIS</code>) and Absolute Error (<code>AE</code>). Values less than 1 indicate the model performs better than the model it is being compared with, and values greater than 1 that it performs worse. WIS values are only shown if all 23 quantiles are provided.</p>
+<div id="htmlwidget-cafe4f5a379b6616cd18" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cafe4f5a379b6616cd18">{"x":{"filter":"none","vertical":false,"data":[["Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Latvia","Liechtenstein","Lithuania","Luxembourg","Malta","Netherlands","Norway","Poland","Portugal","Romania","Slovakia","Slovenia","Spain","Sweden","Switzerland","United Kingdom"],[1.02,0.79,0.65,0.81,1,0.7,0.96,1.08,1.28,1.36,0.81,1.21,0.68,0.65,1.05,0.76,0.9,null,1.33,0.94,0.83,0.77,0.95,0.39,0.98,0.77,0.75,0.75,1.11,0.76,0.93,1.12],[1.34,1.2,1.2,1.19,1.3,1.17,1.07,1.44,1.2,1.49,0.95,1.39,1.21,0.83,1.25,1.21,1.34,null,1.45,1.07,0.86,1.1,1.01,1.77,1.24,1.24,1.06,1.1,1.14,0.99,1.58,1.3],[1.42,1.02,1.11,0.95,1.15,1.26,1.14,0.92,1.25,1.36,0.93,1.08,1.01,0.62,1.24,0.78,1,0.5,1.73,1.04,0.89,1.21,0.96,0.76,0.98,1.03,1.14,1.06,1.29,0.84,1.26,0.97],[1.33,1.2,1.46,1.27,1.4,1.34,1.11,1.37,1.2,1.32,0.96,1.29,1.28,0.63,1.57,1.13,1.16,1,1.3,1.39,1,1.2,1.01,1.25,1.18,1.27,0.96,1.25,1.23,1.04,1.88,1.17]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Location<\/th>\n      <th>WIS vs. baseline<\/th>\n      <th>WIS vs. ensemble<\/th>\n      <th>AE vs. baseline<\/th>\n      <th>AE vs. ensemble<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"info":false,"dom":"Bfrtip","columnDefs":[{"targets":[1,2,3,4],"render":"function(data, type, row) {\n  if(type === 'sort' && data === null) {\n    return Infinity;\n  }\n  return data;\n}"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'90%'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'90%'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'90%'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'90%'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-size':'90%'});\n}"}},"evals":["options.columnDefs.0.render","options.rowCallback"],"jsHooks":[]}</script>
+</details>
+</div>
+<div id="performance-over-time-4" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/98fd95bce3_score-plots-19-1.png" width="100%" /></p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-3" class="section level4">
+<h4>2 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-5" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>The table shows the skill of the MUNI-ARIMA model relative to the baseline (<code>vs. baseline</code>) and the ensemble model (<code>vs. ensemble</code>) for the past 10 weeks in terms of the Weighted Interval Score (<code>WIS</code>) and Absolute Error (<code>AE</code>). Values less than 1 indicate the model performs better than the model it is being compared with, and values greater than 1 that it performs worse. WIS values are only shown if all 23 quantiles are provided.</p>
+<div id="htmlwidget-3d99b1ac7dda5c6959af" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3d99b1ac7dda5c6959af">{"x":{"filter":"none","vertical":false,"data":[["Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Latvia","Liechtenstein","Lithuania","Luxembourg","Malta","Netherlands","Norway","Poland","Portugal","Romania","Slovakia","Slovenia","Spain","Sweden","Switzerland","United Kingdom"],[1.15,0.58,0.78,0.55,1,0.56,1,0.85,0.89,1.12,0.74,1.15,0.82,0.45,0.9,0.62,0.97,1,1.06,1.18,0.81,0.61,0.98,0.48,0.92,0.7,0.63,0.65,1.21,0.61,0.74,1.28],[1.83,1.07,1.77,1.1,1.43,1.3,1.22,0.85,0.93,1.9,1.14,1.28,2.16,0.82,1.36,1.51,1.54,1,1.71,1.18,1,1.33,1.15,3.2,1.26,1.43,1.34,1.41,1.44,1.17,1.64,1.64],[1.3,0.88,1.33,0.57,1.06,0.8,1.08,0.9,0.87,1.14,0.79,1,1.08,0.44,0.96,0.63,1.22,0.67,3.5,1.29,0.89,1.14,0.96,1.4,0.91,0.86,0.92,0.83,1.44,0.69,1.32,1.31],[2.03,0.9,2.11,0.97,1.51,1.11,1.2,0.95,0.98,1.54,1.27,1.19,2.08,0.62,1.81,1.97,1.51,1,2,1.29,1,1.44,1.23,3.89,1.62,1.28,1.44,1.36,1.53,1.21,1.76,1.38]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Location<\/th>\n      <th>WIS vs. baseline<\/th>\n      <th>WIS vs. ensemble<\/th>\n      <th>AE vs. baseline<\/th>\n      <th>AE vs. ensemble<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"info":false,"dom":"Bfrtip","columnDefs":[{"targets":[1,2,3,4],"render":"function(data, type, row) {\n  if(type === 'sort' && data === null) {\n    return Infinity;\n  }\n  return data;\n}"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'90%'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'90%'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'90%'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'90%'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-size':'90%'});\n}"}},"evals":["options.columnDefs.0.render","options.rowCallback"],"jsHooks":[]}</script>
+</details>
+</div>
+<div id="performance-over-time-5" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/a1e30dd6cd_score-plots-22-1.png" width="100%" /></p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-4" class="section level4">
+<h4>3 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-6" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>The table shows the skill of the MUNI-ARIMA model relative to the baseline (<code>vs. baseline</code>) and the ensemble model (<code>vs. ensemble</code>) for the past 10 weeks in terms of the Weighted Interval Score (<code>WIS</code>) and Absolute Error (<code>AE</code>). Values less than 1 indicate the model performs better than the model it is being compared with, and values greater than 1 that it performs worse. WIS values are only shown if all 23 quantiles are provided.</p>
+<div id="htmlwidget-9a8e1bdbca61b7efe9c7" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9a8e1bdbca61b7efe9c7">{"x":{"filter":"none","vertical":false,"data":[["Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Latvia","Liechtenstein","Luxembourg","Malta","Netherlands","Norway","Poland","Portugal","Romania","Slovakia","Slovenia","Spain","Sweden","Switzerland","United Kingdom"],[1.35,0.57,1.35,0.67,1.05,0.59,0.87,1.25,1.05,0.77,0.71,1.04,0.87,0.48,0.83,0.72,1.12,1,1.36,0.83,0.52,1.02,0.71,0.77,0.94,0.52,0.8,1.06,0.73,1,0.99],[2.11,1.04,3.97,1.14,1.57,1.4,1.32,1.42,1.19,1,1.16,1.27,2.35,0.87,0.99,1.76,2.04,0.5,1.25,0.73,1.33,1.24,5.07,0.89,2.09,1.58,1.7,1.25,1.28,3.45,1.65],[1.5,0.82,2.02,0.58,1.03,0.8,0.8,1.2,1.02,0.73,0.71,0.79,1.15,0.45,1,0.79,1.97,0.67,1.93,0.9,1.05,1.09,2.2,0.83,1.29,0.89,1,1.52,0.85,1.51,0.9],[1.97,0.79,4.59,0.91,1.78,1.14,1.38,1.43,1.4,0.94,1.25,1.14,2.09,0.63,1.35,2.32,2.26,1,1.35,0.87,1.35,1.3,5.37,0.94,1.98,1.62,1.67,1.33,1.33,5.39,1.45]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Location<\/th>\n      <th>WIS vs. baseline<\/th>\n      <th>WIS vs. ensemble<\/th>\n      <th>AE vs. baseline<\/th>\n      <th>AE vs. ensemble<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"info":false,"dom":"Bfrtip","columnDefs":[{"targets":[1,2,3,4],"render":"function(data, type, row) {\n  if(type === 'sort' && data === null) {\n    return Infinity;\n  }\n  return data;\n}"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'90%'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'90%'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'90%'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'90%'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-size':'90%'});\n}"}},"evals":["options.columnDefs.0.render","options.rowCallback"],"jsHooks":[]}</script>
+</details>
+</div>
+<div id="performance-over-time-6" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/e7636c6578_score-plots-25-1.png" width="100%" /></p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-5" class="section level4">
+<h4>4 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-7" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>The table shows the skill of the MUNI-ARIMA model relative to the baseline (<code>vs. baseline</code>) and the ensemble model (<code>vs. ensemble</code>) for the past 10 weeks in terms of the Weighted Interval Score (<code>WIS</code>) and Absolute Error (<code>AE</code>). Values less than 1 indicate the model performs better than the model it is being compared with, and values greater than 1 that it performs worse. WIS values are only shown if all 23 quantiles are provided.</p>
+<div id="htmlwidget-3297777e358d2662bc1a" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3297777e358d2662bc1a">{"x":{"filter":"none","vertical":false,"data":[["Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Latvia","Liechtenstein","Luxembourg","Malta","Netherlands","Norway","Poland","Portugal","Romania","Slovakia","Slovenia","Spain","Sweden","Switzerland","United Kingdom"],[1.36,0.62,1.6,0.97,1.06,0.66,0.83,1.13,1.12,0.78,0.77,0.55,1.02,0.51,0.75,0.84,1.24,0,1,0.9,0.56,0.97,1.01,0.65,1.46,0.51,1.05,0.93,0.69,1.01,0.99],[1.84,1.13,6.67,1.28,1.54,1.65,1.51,1.13,1.53,0.99,1.12,1.12,2.32,0.91,0.68,1.75,2.82,null,1.23,0.64,1.27,1.21,7.21,0.87,2.65,1.89,2.14,1.12,1.44,3.37,1.9],[1.54,0.98,2.51,0.85,0.99,0.86,0.67,1.2,1.01,0.77,0.84,0.42,1.49,0.48,0.81,0.8,2.37,0.67,0.9,0.88,0.89,1.05,3.19,0.6,2.07,0.72,1.17,1.25,0.84,1.72,0.85],[1.73,0.88,7.61,1.1,1.68,1.25,1.26,1.3,1.63,0.92,1.33,1,2.29,0.69,0.69,1.86,2.69,1,1.05,0.66,1.02,1.24,7.42,0.82,2.96,1.67,1.72,1.15,1.53,3.82,1.77]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Location<\/th>\n      <th>WIS vs. baseline<\/th>\n      <th>WIS vs. ensemble<\/th>\n      <th>AE vs. baseline<\/th>\n      <th>AE vs. ensemble<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"info":false,"dom":"Bfrtip","columnDefs":[{"targets":[1,2,3,4],"render":"function(data, type, row) {\n  if(type === 'sort' && data === null) {\n    return Infinity;\n  }\n  return data;\n}"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'90%'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'90%'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'90%'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'90%'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-size':'90%'});\n}"}},"evals":["options.columnDefs.0.render","options.rowCallback"],"jsHooks":[]}</script>
+</details>
+</div>
+<div id="performance-over-time-7" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/89cc399dfa_score-plots-28-1.png" width="100%" /></p>
+</div>
+</div>
+</div>
+<div id="hospitalisations-1" class="section level3 tabset tabset-fade">
+<h3>Hospitalisations</h3>
+<div id="week-ahead-horizon-2" class="section level4">
+<h4>1 week ahead horizon</h4>
+<div id="overall-predictive-performance-8" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>The table shows the skill of the MUNI-ARIMA model relative to the baseline (<code>vs. baseline</code>) and the ensemble model (<code>vs. ensemble</code>) for the past 10 weeks in terms of the Weighted Interval Score (<code>WIS</code>) and Absolute Error (<code>AE</code>). Values less than 1 indicate the model performs better than the model it is being compared with, and values greater than 1 that it performs worse. WIS values are only shown if all 23 quantiles are provided.</p>
+<div id="htmlwidget-a5b401f1c03bd73cb279" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a5b401f1c03bd73cb279">{"x":{"filter":"none","vertical":false,"data":[["Slovenia"],[1.05],[1.69],[1.17],[1.7]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Location<\/th>\n      <th>WIS vs. baseline<\/th>\n      <th>WIS vs. ensemble<\/th>\n      <th>AE vs. baseline<\/th>\n      <th>AE vs. ensemble<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"info":false,"dom":"Bfrtip","columnDefs":[{"targets":[1,2,3,4],"render":"function(data, type, row) {\n  if(type === 'sort' && data === null) {\n    return Infinity;\n  }\n  return data;\n}"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'90%'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'90%'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'90%'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'90%'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-size':'90%'});\n}"}},"evals":["options.columnDefs.0.render","options.rowCallback"],"jsHooks":[]}</script>
+</details>
+</div>
+<div id="performance-over-time-8" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/a7d16e41ee_score-plots-31-1.png" width="100%" /></p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-6" class="section level4">
+<h4>2 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-9" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>The table shows the skill of the MUNI-ARIMA model relative to the baseline (<code>vs. baseline</code>) and the ensemble model (<code>vs. ensemble</code>) for the past 10 weeks in terms of the Weighted Interval Score (<code>WIS</code>) and Absolute Error (<code>AE</code>). Values less than 1 indicate the model performs better than the model it is being compared with, and values greater than 1 that it performs worse. WIS values are only shown if all 23 quantiles are provided.</p>
+<div id="htmlwidget-7a1fc712289cd1f771a7" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7a1fc712289cd1f771a7">{"x":{"filter":"none","vertical":false,"data":[["Slovenia"],[1.05],[1.24],[1.19],[1.43]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Location<\/th>\n      <th>WIS vs. baseline<\/th>\n      <th>WIS vs. ensemble<\/th>\n      <th>AE vs. baseline<\/th>\n      <th>AE vs. ensemble<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"info":false,"dom":"Bfrtip","columnDefs":[{"targets":[1,2,3,4],"render":"function(data, type, row) {\n  if(type === 'sort' && data === null) {\n    return Infinity;\n  }\n  return data;\n}"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'90%'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'90%'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'90%'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'90%'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-size':'90%'});\n}"}},"evals":["options.columnDefs.0.render","options.rowCallback"],"jsHooks":[]}</script>
+</details>
+</div>
+<div id="performance-over-time-9" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/8fcf7013f1_score-plots-34-1.png" width="100%" /></p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-7" class="section level4">
+<h4>3 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-10" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>The table shows the skill of the MUNI-ARIMA model relative to the baseline (<code>vs. baseline</code>) and the ensemble model (<code>vs. ensemble</code>) for the past 10 weeks in terms of the Weighted Interval Score (<code>WIS</code>) and Absolute Error (<code>AE</code>). Values less than 1 indicate the model performs better than the model it is being compared with, and values greater than 1 that it performs worse. WIS values are only shown if all 23 quantiles are provided.</p>
+<div id="htmlwidget-6b6cf6e9921daac2f71a" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6b6cf6e9921daac2f71a">{"x":{"filter":"none","vertical":false,"data":[["Slovenia"],[0.94],[0.97],[0.97],[0.91]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Location<\/th>\n      <th>WIS vs. baseline<\/th>\n      <th>WIS vs. ensemble<\/th>\n      <th>AE vs. baseline<\/th>\n      <th>AE vs. ensemble<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"info":false,"dom":"Bfrtip","columnDefs":[{"targets":[1,2,3,4],"render":"function(data, type, row) {\n  if(type === 'sort' && data === null) {\n    return Infinity;\n  }\n  return data;\n}"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'90%'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'90%'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'90%'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'90%'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-size':'90%'});\n}"}},"evals":["options.columnDefs.0.render","options.rowCallback"],"jsHooks":[]}</script>
+</details>
+</div>
+<div id="performance-over-time-10" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/96ff167dfb_score-plots-37-1.png" width="100%" /></p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-8" class="section level4">
+<h4>4 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-11" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>The table shows the skill of the MUNI-ARIMA model relative to the baseline (<code>vs. baseline</code>) and the ensemble model (<code>vs. ensemble</code>) for the past 10 weeks in terms of the Weighted Interval Score (<code>WIS</code>) and Absolute Error (<code>AE</code>). Values less than 1 indicate the model performs better than the model it is being compared with, and values greater than 1 that it performs worse. WIS values are only shown if all 23 quantiles are provided.</p>
+<div id="htmlwidget-836a2ed4622b8b9cca76" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-836a2ed4622b8b9cca76">{"x":{"filter":"none","vertical":false,"data":[["Slovenia"],[0.79],[0.75],[0.61],[0.62]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Location<\/th>\n      <th>WIS vs. baseline<\/th>\n      <th>WIS vs. ensemble<\/th>\n      <th>AE vs. baseline<\/th>\n      <th>AE vs. ensemble<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"info":false,"dom":"Bfrtip","columnDefs":[{"targets":[1,2,3,4],"render":"function(data, type, row) {\n  if(type === 'sort' && data === null) {\n    return Infinity;\n  }\n  return data;\n}"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'90%'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'90%'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'90%'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'90%'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'font-size':'90%'});\n}"}},"evals":["options.columnDefs.0.render","options.rowCallback"],"jsHooks":[]}</script>
+</details>
+</div>
+<div id="performance-over-time-11" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/f6368dff63_score-plots-40-1.png" width="100%" /></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="section-4" class="section level1 unlisted unnumbered">
+<h1></h1>
+<!--- 
+- Table with coverage by horizon for this week
+- Plot of coverage by target and horizon over time
+- PIT histograms
+--->
+<!--- 
+- Table with coverage by horizon for this week
+- Plot of coverage by target and horizon over time
+- PIT histograms
+--->
+<div id="forecast-calibration" class="section level2">
+<h2>Forecast calibration</h2>
+<p>The plots below describe the <em>calibration</em> of the model, that is its ability to correctly quantify its uncertainty, across all predicted countries.</p>
+<div id="overall-coverage" class="section level4">
+<h4>Overall coverage</h4>
+<p>Coverage is the proportion of observations that fall within a given prediction interval. Ideally, a forecast model would achieve 50% coverage of 0.50 (i.e., 50% of observations fall within the 50% prediction interval) and 95% coverage of 0.95 (i.e., 95% of observations fall within the 95% prediction interval), incidcated by the dashed horizontal lines below. Values of coverage greater than these nominal values indicate that the forecasts are <em>underconfident</em>, i.e. prediction intervals tend to be too wide, whereas values of coverage smaller than these nominal values indicate that the ensemble forecasts are <em>overconfident</em>, i.e. prediction intervals tend to be too narrow.</p>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/coverage-1.png" width="576" /></p>
+</div>
+<div id="pit-histograms" class="section level4">
+<h4>PIT histograms</h4>
+<p>The figures below are <em>PIT histograms</em> for the all past forecasts. These show the proportion of true values within each predictive quantile (width: 0.1). If the forecasts were perfectly calibrated, observations would fall evenly across these equally-spaced quantiles, i.e. the histograms would be flat.</p>
+<p><img src="model-report-MUNI-ARIMA_files/figure-html/pit-1.png" width="768" /></p>
+<!--- Number of models included in the ensemble for each country and target --->
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

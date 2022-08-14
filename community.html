@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Community</title>
+
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link rel="shortcut icon" href="images/favicon.svg" />
+
+<script data-goatcounter="https://covid19-forecast-hub-europe.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">European Covid-19 Forecast Hub</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="visualisation.html">
+    <span class="fas fa-chart-line"></span>
+     
+    Forecasts
+  </a>
+</li>
+<li>
+  <a href="reports.html">
+    <span class="fa fa-file-alt"></span>
+     
+    Reports
+  </a>
+</li>
+<li>
+  <a href="community.html">
+    <span class="fa fa-users"></span>
+     
+    Community
+  </a>
+</li>
+<li>
+  <a href="background.html">
+    <span class="fa fa-info-circle"></span>
+     
+    Background
+  </a>
+</li>
+<li>
+  <a href="papers.html">
+    <span class="fa fa-newspaper"></span>
+     
+    Citations &amp; re-uses
+  </a>
+</li>
+<li>
+  <a href="contact.html">
+    <span class="fa fa-envelope"></span>
+     
+    Contact
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe">
+    <span class="fab fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Community</h1>
+
+</div>
+
+
+<p>Teams from anywhere in the world are invited to submit forecasts once a week for one or more of the countries. Take a look at the <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe/wiki">submission instructions</a> and <a href="contact.html">get in touch</a> with any questions.</p>
+<div id="teams" class="section level1">
+<h1>Teams</h1>
+<table>
+<colgroup>
+<col width="21%" />
+<col width="33%" />
+<col width="8%" />
+<col width="22%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Model name</th>
+<th align="left">Authors</th>
+<th align="left">Team</th>
+<th align="left">Methods</th>
+<th align="left">Complete metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href="https://github.com/lalvarezmat/EpiInvert">AMM-EpiInvert</a></td>
+<td align="left">Luis Alvarez, Jean-David Morel, Jean-Michel Morel</td>
+<td align="left">AMM</td>
+<td align="left">Learning from the past a short time forecast of the COVID-19 incidence curve trend.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/AMM-EpiInvert.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://biocomsc.upc.edu/en/covid-19">BIOCOMSC-Gompertz</a></td>
+<td align="left">Martí Català, Enric Álvarez, Sergio Alonso, Daniel López, Clara Prats</td>
+<td align="left">BIOCOMSC</td>
+<td align="left">Empirical model based on cases and deaths dynamics.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/BIOCOMSC-Gompertz.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.medrxiv.org/content/10.1101/2021.02.16.21251834v1">bisop-seirfilter</a></td>
+<td align="left">Martin Šmíd, Jan Trnka, Vít Tuček, Milan Zajíček</td>
+<td align="left">Centre for Modelling of Biological and Social Processes</td>
+<td align="left">please see <a href="https://www.medrxiv.org/content/10.1101/2021.02.16.21251834v1" class="uri">https://www.medrxiv.org/content/10.1101/2021.02.16.21251834v1</a></td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/bisop-seirfilter.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.bisop.eu/">bisop-seirfilterlite</a></td>
+<td align="left">Martin Šmíd, Jan Trnka, Vít Tuček, Milan Zajíček</td>
+<td align="left">Centre for Modelling of Biological and Social Processes</td>
+<td align="left">A simple stochastic SEIR state space model</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/bisop-seirfilterlite.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://tomz.shinyapps.io/coronaLandkreise/">CovidMetrics-epiBATS</a></td>
+<td align="left">Tom Zimmermann, Arne Rodloff</td>
+<td align="left">University of Cologne Covid Metrics</td>
+<td align="left">Forecasts are based on TBATS - models (DeLivera, Hyndman and Snyder (2011)) and are updated daily for each German state.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/CovidMetrics-epiBATS.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/HoddleHH">DirkBeckmann-Gompertz</a></td>
+<td align="left">Dr. Dirk Beckmann</td>
+<td align="left">DirkBeckmann</td>
+<td align="left">gompertz model</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/DirkBeckmann-Gompertz.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/Priesemann-Group/covid19_inference_forecast">DSMPG-bayes</a></td>
+<td align="left">Sebastian B. Mohr, Jonas Dehning, Viola Priesemann</td>
+<td align="left">Priesemann Group, MPI-DS</td>
+<td align="left">Bayesian inference of SIR-dynamics</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/DSMPG-bayes.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://covid19-country-overviews.ecdc.europa.eu/">ECDC-hosp_model</a></td>
+<td align="left">Rok Grah, Rene Niehus</td>
+<td align="left">ECDC Modelling Team</td>
+<td align="left">mechanistic estimation of hospitalisations using age disaggregated data of weekly cases, vaccination, and case hospitalisation rates</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/ECDC-hosp_model.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://epiforecasts.io/">epiforecasts-arimareg</a></td>
+<td align="left">Sophie Meakin</td>
+<td align="left">epiforecasts</td>
+<td align="left">A regression model forecasting admissions from 1-week-lagged cases, with ARIMA errors. Fit to weekly data.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/epiforecasts-arimareg.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://epiforecasts.io/">epiforecasts-caseconv</a></td>
+<td align="left">Sophie Meakin</td>
+<td align="left">epiforecasts</td>
+<td align="left">A convolution of cases and a delay distribution fit to weekly data.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/epiforecasts-caseconv.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://epiforecasts.io/">epiforecasts-EpiExpert_direct</a></td>
+<td align="left">Nikos Bosse, Sam Abbott, Sebastian Funk</td>
+<td align="left">Epiforecasts / London School of Hygiene and Tropical Medicine</td>
+<td align="left">Mean ensemble of human predictions</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/epiforecasts-EpiExpert_direct.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://epiforecasts.io/">epiforecasts-EpiExpert_Rt</a></td>
+<td align="left">Nikos Bosse, Sam Abbott, Sebastian Funk</td>
+<td align="left">Epiforecasts / London School of Hygiene and Tropical Medicine</td>
+<td align="left">Mean ensemble of human predictions of Rt which get mapped to cases and deaths using a renewal equation</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/epiforecasts-EpiExpert_Rt.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://epiforecasts.io/">epiforecasts-EpiExpert</a></td>
+<td align="left">Nikos Bosse, Sam Abbott, Sebastian Funk</td>
+<td align="left">Epiforecasts / London School of Hygiene and Tropical Medicine</td>
+<td align="left">Mean ensemble of human predictions</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/epiforecasts-EpiExpert.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://epiforecasts.io/EpiNow2">epiforecasts-EpiNow2</a></td>
+<td align="left">Nikos Bosse, Sam Abbott, Sebastian Funk</td>
+<td align="left">Epiforecasts / London School of Hygiene and Tropical Medicine</td>
+<td align="left">Semi-mechanistic estimation of the time-varying reproduction number for latent infections mapped to reported cases/deaths.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/epiforecasts-EpiNow2.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://epiforecasts.io/">epiforecasts-tsensemble</a></td>
+<td align="left">Sophie Meakin</td>
+<td align="left">epiforecasts</td>
+<td align="left">A mean ensemble of three autoregressive time series models (ARIMA, ETS and “naive” - future admissions are equal to the last observed week, with expanding uncertainty).</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/epiforecasts-tsensemble.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://samabbott.co.uk">epiforecasts-weeklygrowth</a></td>
+<td align="left">Sam Abbott</td>
+<td align="left">epiforecasts</td>
+<td align="left">A Bayesian autoregressive model using weekly incidence data, application of the forecast.vocs R package.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/epiforecasts-weeklygrowth.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.epimox.polimi.it">epiMOX-SUIHTER</a></td>
+<td align="left">Giovanni Ardenghi, Giovanni Ziarelli, Luca Dede’, Nicola Parolini, Alfio Quarteroni</td>
+<td align="left">epiMOX</td>
+<td align="left">Compartmental model SUIHTER</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/epiMOX-SUIHTER.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://covid19forecasthub.eu/">EuroCOVIDhub-baseline</a></td>
+<td align="left">Hugo Gruson</td>
+<td align="left">European COVID-19 Forecast Hub</td>
+<td align="left">An baseline model against which other models can be evaluated</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/EuroCOVIDhub-baseline.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://covid19forecasthub.eu/">EuroCOVIDhub-ensemble</a></td>
+<td align="left">Katharine Sherratt, Nikos Bosse, Sebastian Funk</td>
+<td align="left">European COVID-19 Forecast Hub</td>
+<td align="left">An ensemble, or model average, of submitted forecasts to the European COVID-19 Forecast Hub.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/EuroCOVIDhub-ensemble.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.fz-juelich.de/SharedDocs/Meldungen/IAS/JSC/DE/2021/2021-01-covid-19.html;jsessionid=F4D5FB4027E871A6F4C2FCAF0F08FC35">FIAS_FZJ-Epi1Ger</a></td>
+<td align="left">Maria V. Barbarossa, Jan Fuhrmann, Stefan Krieg, Jan H. Meinke</td>
+<td align="left">Frankfurt Institute for Advanced Studies &amp; Forschungszentrum Jülich</td>
+<td align="left">An extended SEIR model with additional compartments for undetected cases</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/FIAS_FZJ-Epi1Ger.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://git.folkhalsomyndigheten.se/martin.camitz/c19inlbel">fohm-c19inbel</a></td>
+<td align="left">Sharon Kuhlmann-Berenzon, Martin Camitz</td>
+<td align="left">FD-AN, Folkhälsomyndigheten</td>
+<td align="left">Negative binomial fit/projection on reported cases by age group, then converted to hospitalizations by risk assumptions updated circa monthly.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/fohm-c19inbel.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/2bys/covid19-forecast-hub-europe">GoeWroc-BaseBayes</a></td>
+<td align="left">Tobias Weber, Viktor Bezborodov, Tyll Krueger, Dominic Schuhmacher</td>
+<td align="left">GoeWroc</td>
+<td align="left">A mixture between a SIR and Bayesian modelling approach, with regard to a possible spatial extension and local r values in later versions.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/GoeWroc-BaseBayes.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.helmholtz-hzi.de/en/nc/research/research-topics/bacterial-and-viral-pathogens/epidemiology/team/">HZI-AgeExtendedSEIR</a></td>
+<td align="left">Isti Rodiah, Berit Lange, Pratizio Vanella, Alexander Kuhlmann, Wolfgang Bock</td>
+<td align="left">Helmholtz Zentrum fuer Infektionsforschung</td>
+<td align="left">Deterministic SEIR type model</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/HZI-AgeExtendedSEIR.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://covid-19.icm.edu.pl/en/model-description/">ICM-agentModel</a></td>
+<td align="left">Rafał Bartczuk, Łukasz Górski, Magdalena Gruziel-Słomka, Artur Kaczorek, Jan Kisielewski, Antoni Moszyński, Karol Niedzielewski, Jędrzej Nowosielski, Maciej Radwan, Franciszek Rakowski, Marcin Semeniuk, Jakub Zieliński</td>
+<td align="left">ICM / University of Warsaw</td>
+<td align="left">Agent-based model</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/ICM-agentModel.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://iem.com/">IEM_Health-CovidProject</a></td>
+<td align="left">Brad Suchoski, Steve Stage, Heidi Gurung, Sid Baccam</td>
+<td align="left">IEM Health</td>
+<td align="left">SEIR model projections for daily incident confirmed COVID cases and deaths by using AI to fit actual cases observed.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/IEM_Health-CovidProject.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/Stochastik-TU-Ilmenau">ILM-EKF</a></td>
+<td align="left">Stefan Heyder, Thomas Hotz</td>
+<td align="left">ILM</td>
+<td align="left">Extended Kalman filter based on reproduction equation</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/ILM-EKF.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://mrc-ide.github.io/covid19-short-term-forecasts">Imperial-DeCa</a></td>
+<td align="left">Sangeeta Bhatia, Pierre Nouvellet</td>
+<td align="left">Imperial College London</td>
+<td align="left">Uses both cases and deaths to estimate an observed CFR. Projections are based on the estimated CFR.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/Imperial-DeCa.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://mrc-ide.github.io/covid19-short-term-forecasts">Imperial-RtI0</a></td>
+<td align="left">Sangeeta Bhatia, Pierre Nouvellet</td>
+<td align="left">Imperial College London</td>
+<td align="left">Jointly estimates initial incidence and reproduction number</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/Imperial-RtI0.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://mrc-ide.github.io/covid19-short-term-forecasts">Imperial-sbkp</a></td>
+<td align="left">Sangeeta Bhatia, Pierre Nouvellet, Kris V Parag</td>
+<td align="left">Imperial College London</td>
+<td align="left">Optimises the window over which reproduction number is assumed to be constant.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/Imperial-sbkp.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.itwm.fraunhofer.de/">itwm-dSEIR</a></td>
+<td align="left">Jan Mohring, Neele Leithäuser, Michael Helmling</td>
+<td align="left">Fraunhofer Institute for Industrial Mathematics ITWM</td>
+<td align="left">Integral equation model based on age cohorts taking into account vaccination and testing. The parameters are adjusted to the counted cases and deaths.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/itwm-dSEIR.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/Stochastik-TU-Ilmenau">ITWW-county_repro</a></td>
+<td align="left">Przemyslaw Biecek, Viktor Bezborodov, Marcin Bodych, Jan Pablo Burgard, Stefan Heyder, Thomas Hotz, Tyll Krüger</td>
+<td align="left">ITWW</td>
+<td align="left">Forecasts of county level incidence based on regional reproduction numbers.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/ITWW-county_repro.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://joebud.github.io/covid-19-analyses/">JBUD-HMXK</a></td>
+<td align="left">Jozef Budzinski</td>
+<td align="left">JBUD</td>
+<td align="left">Heavily modified infection-age SIR-X model with waning immunity, vaccinations, seasonality and undetected cases.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/JBUD-HMXK.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://pypm.github.io/home/">Karlen-pypm</a></td>
+<td align="left">Dean Karlen</td>
+<td align="left">Karlen Working Group</td>
+<td align="left">Discrete-time difference equations with long periods of constant transmission rate</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/Karlen-pypm.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/jbracher/branching_process_delta">KITmetricslab-bivar_branching</a></td>
+<td align="left">Johannes Bracher</td>
+<td align="left">KITmetricslab</td>
+<td align="left">Delta-variant and other cases are modelled as independent branching processes, with weekly growth  rates following random walks. Forecasts for 3 and 4 wk are likely unreliable.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/KITmetricslab-bivar_branching.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://covid-19.bsvgateway.org/">LANL-GrowthRate</a></td>
+<td align="left">Dave Osthus, Sara Del Valle, Carrie Manore, Brian Weaver, Lauren Castro, Courtney Shelley, Manhong (Mandy) Smith, Julie Spencer, Geoffrey Fairchild, Travis Pitts, Dax Gerts, Lori Dauelsberg, Ashlynn Daughton, Morgan, Gorris, Beth Hornbein, Daniel Israel, Nidhi Parikh, Deborah Shutt, Amanda Ziemann</td>
+<td align="left">Los Alamos National Labs</td>
+<td align="left">This model makes predictions about the future, unconditional on particular intervention strategies. Statistical dynamical growth model accounting for population susceptibility.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/LANL-GrowthRate.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/holgerman/covid19-forecast-hub-europe">LeipzigIMISE-SECIR</a></td>
+<td align="left">Yuri Kheifetz, Holger Kirsten, Markus Scholz</td>
+<td align="left">Universitaet Leipzig IMISE/GenStat</td>
+<td align="left">SECIR type model</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/LeipzigIMISE-SECIR.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://covid19.mimuw.edu.pl">MIMUW-StochSEIR</a></td>
+<td align="left">Anna Gambin, Krzysztof Gogolewski, Blażej Miasojedow, Ewa Szczurek, Daniel Rabczenko, Magdalena Rosińska</td>
+<td align="left">Faculty of Mathematics, Informatics, and Mechanics, University of Warsaw</td>
+<td align="left">Extended SEIR model</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/MIMUW-StochSEIR.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.covidanalytics.io/">MIT_CovidAnalytics-DELPHI</a></td>
+<td align="left">Michael Lingzhi Li, Hamza Tazi Bouardi, Dimitris Bertsimas</td>
+<td align="left">CovidAnalytics at MIT</td>
+<td align="left">This model makes predictions for future cases based on a heavily modified SEIR model taking into account underdetection and government intervention. Current interventions are assumed to continue.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/MIT_CovidAnalytics-DELPHI.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://mocos.pl/">MOCOS-agent1</a></td>
+<td align="left">Marek Bawiec, Marcin Bodych, Tyll Krueger, Tomasz Ozanski, Barbara Pabjan, Agata Migalska, Przemyslaw Biecak, Viktor Bezborodov, Ewa Szczurek, Ewaryst Rafajłowicz, Ewa Rafajłowicz, Wojciech Rafajłowicz</td>
+<td align="left">MOCOS group</td>
+<td align="left">Agent-based microsimulation model</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/MOCOS-agent1.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://webstudio.shinyapps.io/MAMES/">MUNI_DMS-SEIAR</a></td>
+<td align="left">Veronika Eclerova, Lenka Pribylova</td>
+<td align="left">Department of Mathematics and Statistics Masaryk University Team</td>
+<td align="left">SEIAR model with A compartment of absent unobserved infected estimated from hospital data with incorporated mobility data dependence; optimized to the compartment of all exposed (unobserved included)</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/MUNI_DMS-SEIAR.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://krausstat.shinyapps.io/covid19global/">MUNI-ARIMA</a></td>
+<td align="left">Andrea Kraus, David Kraus</td>
+<td align="left">Masaryk University</td>
+<td align="left">ARIMA model with outlier detection fitted to transformed weekly aggregated series.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/MUNI-ARIMA.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://krausstat.shinyapps.io/covid19global/">MUNI-LaggedRegARIMA</a></td>
+<td align="left">Andrea Kraus, David Kraus</td>
+<td align="left">Masaryk University</td>
+<td align="left">Regression of hospitalizations and deaths on lagged cases with ARIMA errors.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/MUNI-LaggedRegARIMA.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://krausstat.shinyapps.io/covid19global/">MUNI-VAR</a></td>
+<td align="left">Andrea Kraus, David Kraus</td>
+<td align="left">Masaryk University</td>
+<td align="left">Vector autoregression model fitted to outlier-corrected transformed weekly aggregated series.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/MUNI-VAR.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRpH4yhKRts7Co5tydhZhojIPTcTTybms1PqJ9j1tmSBzzPLoU2U9XjUWDwiKYxnE6gMLayl71rpGC8/pubhtml?gid=493251550&amp;single=true">PL_GRedlarski-DistrictsSum</a></td>
+<td align="left">Grzegorz Redlarski</td>
+<td align="left">Grzegorz Redlarski</td>
+<td align="left">Modified SIR method, applied to all districts. Forecasts for districts are summed up.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/PL_GRedlarski-DistrictsSum.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://cp.lpmib.fr/medias/covid19/_synthese.html">prolix-euclidean</a></td>
+<td align="left">Loïc Pottier</td>
+<td align="left">prolix</td>
+<td align="left">Offsets obtained by correlations, best linear approximation of reproduction rates (using vaccination approximation) by least euclidean distance, and linear prediction.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/prolix-euclidean.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="http://rwalraven.com/COVID19">RobertWalraven-ESG</a></td>
+<td align="left">Robert Walraven</td>
+<td align="left">Robert Walraven</td>
+<td align="left">Multiple skewed gaussian distribution peaks fit to raw data</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/RobertWalraven-ESG.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/">SDSC_ISG-TrendModel</a></td>
+<td align="left">Ekaterina Krymova, Dorina Thanou, Benjamin Bejar Haro, Tao Sun, Gavin Lee, Elisa Manetti, Christine Choirat, Antoine Flahault, Guillaume Obozinski</td>
+<td align="left">Swiss Data Science Center / University of Geneva</td>
+<td align="left">The Trend Model predicts daily cases and deaths using linear extrapolation on the linear or log scale of the underlying trend estimated by a robust LOESS seasonal-trend decomposition model.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/SDSC_ISG-TrendModel.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://statgroup19.shinyapps.io/Covid19App/">Statgroup19-richards</a></td>
+<td align="left">Marco Mingione, Pierfrancesco Alaimo Di Loro</td>
+<td align="left">Statgroup19</td>
+<td align="left">Richards’ curve based generalized growth model</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/Statgroup19-richards.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://statgroup19.shinyapps.io/Covid19App/">Statgroup19-spatialrichards</a></td>
+<td align="left">Marco Mingione, Pierfrancesco Alaimo Di Loro</td>
+<td align="left">Statgroup19</td>
+<td align="left">Richards’ curve based generalized growth model taking into account spatial dependence</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/Statgroup19-spatialrichards.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://dmorina.shinyapps.io/UB-CoV/">UB-BSLCoV</a></td>
+<td align="left">David Moriña</td>
+<td align="left">UB</td>
+<td align="left">Bayesian synthetic likelihood estimation for underreported non-stationary time series</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/UB-BSLCoV.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.arcos.inf.uc3m.es/epigraph/">UC3M-EpiGraph</a></td>
+<td align="left">David E. Singh, Miguel Guzman Merino, Maria Cristina Marinescu, Jesus Carretero, Alberto Cascajo Garcia</td>
+<td align="left">Universidad Carlos III de Madrid</td>
+<td align="left">Agent-based parallel simulator that models individual interactions extracted from social networks and demographical data.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/UC3M-EpiGraph.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://apps.lusy.fri.uni-lj.si">ULZF-SEIRC19SI</a></td>
+<td align="left">Janez Zibert</td>
+<td align="left">University of Ljubljana, Faculty of Health Sciences Team</td>
+<td align="left">SEIHR model extended with compartments for hospitals, intensive care units, asymptomatic cases, separate submodels for vaccinated and unvaccinated, divided to 5 age subgroups of population</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/ULZF-SEIRC19SI.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/dsheldon/covid">UMass-MechBayes</a></td>
+<td align="left">Dan Sheldon, Graham Gibson, Nick Reich</td>
+<td align="left">UMass-Amherst</td>
+<td align="left">Bayesian compartmental model with observations on cumulative case counts and cumulative deaths. Model is fit independently to each state. Model includes observation noise and a case detection rate.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/UMass-MechBayes.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/dsheldon/covid">UMass-SemiMech</a></td>
+<td align="left">Dan Sheldon, Graham Gibson, Nick Reich</td>
+<td align="left">UMass-Amherst</td>
+<td align="left">Bayesian semi-compartmental model with observations on incident case counts and incident deaths. Model is fit independently to each state. Model includes observation noise and a case detection rate.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/UMass-SemiMech.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://precov2.org">UNED-PreCoV2</a></td>
+<td align="left">José L. Aznarte, César Pérez, José Almagro, Pedro Álvarez, Álvaro Ortiz, Fernando Blat</td>
+<td align="left">UNED</td>
+<td align="left">Bayesian time series models with ARIMA noise and fixed transfer functions for each input.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/UNED-PreCoV2.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://periscopeproject.eu/home">UNIPV-BayesINGARCHX</a></td>
+<td align="left">Paolo Giudici, Barbara Tarantino</td>
+<td align="left">UNIPV Periscope Working Group</td>
+<td align="left">Bayesian estimation of time-dependent models with time-varying coefficients to predict COVID-19 positive counts.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/UNIPV-BayesINGARCHX.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/francescobartolucci/ARMultinomial">UpgUmibUsi-MultiBayes</a></td>
+<td align="left">Francesco Bartolucci, Fulvia Pennoni, Antonietta Mira</td>
+<td align="left">UNIPG_UNIMIB_USI_UNINSUBRIA</td>
+<td align="left">Bayesian Dirichlet-Multinomial models for counts of patients in mutually exclusive and exhaustive categories such as hospitalized in regular wards and in intensive care units, deceased and recovered</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/UpgUmibUsi-MultiBayes.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://scc-usc.github.io/ReCOVER-COVID-19">USC-SIkJalpha</a></td>
+<td align="left">Ajitesh Srivastava, Frost Tianjian Xu</td>
+<td align="left">University of Southern California</td>
+<td align="left">A heterogeneous infection rate model with human mobility for epidemic modeling. Our model adapts to changing trends and provide predictions of confirmed cases and deaths.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/USC-SIkJalpha.yml">Metadata</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/pmontman/covid19forec">USyd-OneModelMan</a></td>
+<td align="left">Pablo Montero Manso</td>
+<td align="left">University of Sydney Forecast Lab</td>
+<td align="left">A single autoregressive model fit jointly to all European time series, adding time series from the top regions across the world. A high-dimensional manifold embedding is used capture the process.</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/USyd-OneModelMan.yml">Metadata</a></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://biocomplexity.virginia.edu/">UVA-Ensemble</a></td>
+<td align="left">Aniruddha Adiga, Lijing Wang, Srinivasan Venkatramanan, Akhil Sai Peddireddy, Benjamin Hurt, Przemyslaw Porebski, Bryan Lewis, Madhav Marathe, Jiangzhou Chen, Anil Vullikanti</td>
+<td align="left">University of Virginia, Biocomplexity COVID-19 Response Team</td>
+<td align="left">An ensemble of multiple methods such as auto-regressive (AR)models with exogenous variables, Long short-term memory (lSTM) models,Kalman filter and PatchSim (an SEIR model).</td>
+<td align="left"><a href="https://raw.githubusercontent.com/epiforecasts/covid19-forecast-hub-europe/main/model-metadata/UVA-Ensemble.yml">Metadata</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="presentations" class="section level1">
+<h1>Presentations</h1>
+<p>The ECDC hosts weekly calls which any forecasting team is welcome to join. Each week a different team is invited to present and discuss forecasting methods. Slides and extra content provided by the teams can be accessed below. Please note that slides might be released under a different license than the MIT license used for the rest of this website:</p>
+<p>19/05/2022 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2022-05-19-natural-hybrid-immunity.pdf">natural hybrid immunity</a></p>
+<p>19/05/2022 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2022-05-19-ecdc-immunity.pdf">ecdc immunity</a></p>
+<p>05/05/2022 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2022-05-05-wastewater-covid19.pdf">wastewater covid19</a></p>
+<p>21/04/2022 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2022-04-21-UC3M-EpiGraph.pdf">UC3M EpiGraph</a></p>
+<p>08/12/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-12-08-Nowcasting-Bracher.pdf">Nowcasting Bracher</a></p>
+<p>03/11/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-11-03-ITWW-county_repro.pdf">ITWW county_repro</a></p>
+<p>27/10/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-10-27-Statgroup19-richards.pdf">Statgroup19 richards</a></p>
+<p>20/10/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-10-20-epiMOX-SUIHTER.pdf">epiMOX SUIHTER</a></p>
+<p>06/10/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-10-06-UpgUmibUsi-MultiBayes.pdf">UpgUmibUsi MultiBayes</a></p>
+<p>22/09/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-09-22-epiforecasts-EpiNow2.pdf">epiforecasts EpiNow2</a></p>
+<p>07/09/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-09-07-Hub-forecast-review.pdf">Hub forecast review</a></p>
+<p>06/07/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-07-06-Karlen-pypm.pdf">Karlen pypm</a></p>
+<p>22/06/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-06-22-FIAS_FZJ-Epi1Ger.pdf">FIAS_FZJ Epi1Ger</a></p>
+<p>08/06/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-06-08-epiforecasts-EpiExpert.pdf">epiforecasts EpiExpert</a></p>
+<p>25/05/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-05-25-SEIAR-MUNI.pdf">SEIAR MUNI</a></p>
+<p>18/05/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-05-18-Imperial.pdf">Imperial</a></p>
+<p>11/05/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-05-11-ICM-agentmodel.pdf">ICM agentmodel</a></p>
+<p>20/04/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-04-20-MOCOS-agent1.pdf">MOCOS agent1</a></p>
+<p>13/04/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-04-13-UNED-PreCoV2.pdf">UNED PreCoV2</a></p>
+<p>30/03/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-03-30-DSMPG-bayes.pdf">DSMPG bayes</a></p>
+<p>23/03/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-03-23-UNIPV-BayesINGARCH.pdf">UNIPV BayesINGARCH</a></p>
+<p>09/03/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-03-09-Evaluation-of-interval-forecasts.pdf">Evaluation of interval forecasts</a></p>
+<p>02/03/2021 <a href="https://github.com/epiforecasts/covid19-forecast-hub-europe-website/raw/main/presentations/2021-03-02-The-European-Covid19-Forecast-Hub.pdf">The European Covid19 Forecast Hub</a></p>
+</div>
+
+<script type="text/javascript">
+var all_links = document.querySelectorAll('a');
+for (var i = 0; i < all_links.length; i++){
+       var a = all_links[i];
+       if(a.hostname != location.hostname) {
+               a.rel = 'noopener';
+               a.target = '_blank';
+       }
+}
+</script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+</body>
+</html>

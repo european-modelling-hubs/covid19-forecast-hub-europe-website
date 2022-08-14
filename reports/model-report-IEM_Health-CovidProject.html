@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Weekly reports (2022-08-08)</title>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<link href="libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="https://covid19forecasthub.eu/css/styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Weekly reports (2022-08-08)</h1>
+
+</div>
+
+
+<!--- Fetch various values from the config file --->
+<!--- Fetch various values from the config file --->
+<div id="section" class="section level2 unlisted unnumbered">
+<h2></h2>
+<p>Choose the type of report you wish do view using the dropdown menu. The Model reports shows the recent forecasts and performance of the ensemble or individual models, whereas the Country reports shows model-by-model performance, either overall or by country. The reports get updated every Tuesday.</p>
+<div class="dropdown" style="display:inline-block">
+<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Model reports ▼</button>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<li class="dropdown-item">
+<a href="model-report-AMM-EpiInvert.html">AMM-EpiInvert</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-BIOCOMSC-Gompertz.html">BIOCOMSC-Gompertz</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-bisop-seirfilter.html">bisop-seirfilter</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-bisop-seirfilterlite.html">bisop-seirfilterlite</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-CovidMetrics-epiBATS.html">CovidMetrics-epiBATS</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-DirkBeckmann-Gompertz.html">DirkBeckmann-Gompertz</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-DSMPG-bayes.html">DSMPG-bayes</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-ECDC-hosp_model.html">ECDC-hosp_model</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-arimareg.html">epiforecasts-arimareg</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-caseconv.html">epiforecasts-caseconv</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-EpiExpert_direct.html">epiforecasts-EpiExpert_direct</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-EpiExpert_Rt.html">epiforecasts-EpiExpert_Rt</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-EpiExpert.html">epiforecasts-EpiExpert</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-EpiNow2.html">epiforecasts-EpiNow2</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-tsensemble.html">epiforecasts-tsensemble</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiforecasts-weeklygrowth.html">epiforecasts-weeklygrowth</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-epiMOX-SUIHTER.html">epiMOX-SUIHTER</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-EuroCOVIDhub-baseline.html">EuroCOVIDhub-baseline</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-EuroCOVIDhub-ensemble.html">EuroCOVIDhub-ensemble</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-FIAS_FZJ-Epi1Ger.html">FIAS_FZJ-Epi1Ger</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-fohm-c19inbel.html">fohm-c19inbel</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-GoeWroc-BaseBayes.html">GoeWroc-BaseBayes</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-HZI-AgeExtendedSEIR.html">HZI-AgeExtendedSEIR</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-ICM-agentModel.html">ICM-agentModel</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-IEM_Health-CovidProject.html">IEM_Health-CovidProject</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-ILM-EKF.html">ILM-EKF</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-Imperial-DeCa.html">Imperial-DeCa</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-Imperial-RtI0.html">Imperial-RtI0</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-Imperial-sbkp.html">Imperial-sbkp</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-itwm-dSEIR.html">itwm-dSEIR</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-ITWW-county_repro.html">ITWW-county_repro</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-JBUD-HMXK.html">JBUD-HMXK</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-Karlen-pypm.html">Karlen-pypm</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-KITmetricslab-bivar_branching.html">KITmetricslab-bivar_branching</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-LANL-GrowthRate.html">LANL-GrowthRate</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-LeipzigIMISE-SECIR.html">LeipzigIMISE-SECIR</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-MIMUW-StochSEIR.html">MIMUW-StochSEIR</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-MIT_CovidAnalytics-DELPHI.html">MIT_CovidAnalytics-DELPHI</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-MOCOS-agent1.html">MOCOS-agent1</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-MUNI_DMS-SEIAR.html">MUNI_DMS-SEIAR</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-MUNI-ARIMA.html">MUNI-ARIMA</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-MUNI-LaggedRegARIMA.html">MUNI-LaggedRegARIMA</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-MUNI-VAR.html">MUNI-VAR</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-PL_GRedlarski-DistrictsSum.html">PL_GRedlarski-DistrictsSum</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-prolix-euclidean.html">prolix-euclidean</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-RobertWalraven-ESG.html">RobertWalraven-ESG</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-SDSC_ISG-TrendModel.html">SDSC_ISG-TrendModel</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-Statgroup19-richards.html">Statgroup19-richards</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-Statgroup19-spatialrichards.html">Statgroup19-spatialrichards</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UB-BSLCoV.html">UB-BSLCoV</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UC3M-EpiGraph.html">UC3M-EpiGraph</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-ULZF-SEIRC19SI.html">ULZF-SEIRC19SI</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UMass-MechBayes.html">UMass-MechBayes</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UMass-SemiMech.html">UMass-SemiMech</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UNED-PreCoV2.html">UNED-PreCoV2</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UNIPV-BayesINGARCHX.html">UNIPV-BayesINGARCHX</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UpgUmibUsi-MultiBayes.html">UpgUmibUsi-MultiBayes</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-USC-SIkJalpha.html">USC-SIkJalpha</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-USyd-OneModelMan.html">USyd-OneModelMan</a>
+</li>
+<li class="dropdown-item">
+<a href="model-report-UVA-Ensemble.html">UVA-Ensemble</a>
+</li>
+</ul>
+</div>
+<div class="dropdown" style="display:inline-block">
+<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Country reports ▼</button>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<li class="dropdown-item">
+<a href="country-report-Overall.html">Overall</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Austria.html">Austria</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Belgium.html">Belgium</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Bulgaria.html">Bulgaria</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Croatia.html">Croatia</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Cyprus.html">Cyprus</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Czechia.html">Czechia</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Denmark.html">Denmark</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Estonia.html">Estonia</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Finland.html">Finland</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-France.html">France</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Germany.html">Germany</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Greece.html">Greece</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Hungary.html">Hungary</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Iceland.html">Iceland</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Ireland.html">Ireland</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Italy.html">Italy</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Latvia.html">Latvia</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Liechtenstein.html">Liechtenstein</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Lithuania.html">Lithuania</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Luxembourg.html">Luxembourg</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Malta.html">Malta</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Netherlands.html">Netherlands</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Norway.html">Norway</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Poland.html">Poland</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Portugal.html">Portugal</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Romania.html">Romania</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Slovakia.html">Slovakia</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Slovenia.html">Slovenia</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Spain.html">Spain</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Sweden.html">Sweden</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-Switzerland.html">Switzerland</a>
+</li>
+<li class="dropdown-item">
+<a href="country-report-United Kingdom.html">United Kingdom</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="european-covid-19-forecast-hub-evaluation-report-for-iem_health-covidproject" class="section level1">
+<h1>European COVID-19 Forecast Hub Evaluation Report for IEM_Health-CovidProject</h1>
+<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
+<!--- Chunk to load forecast and truth data and consolidate it in a single df called data. Usually called as the first chunk. This step is cached so make sure to delete the cached files if necessary when testing. -->
+<div id="section-1" class="section level2 unlisted unnumbered">
+<h2></h2>
+<!--- Load forecast scores -->
+<!--- Evaluate and score forecasts -->
+<!--- Chunk to filter data and scores to keep only the relevant locations, horizons and target varaibles. Is is separated from the global scoring step
+so that we can cache the loading and scoring step.. -->
+<!--- Chunk to filter data and scores to keep only the relevant locations, horizons and target varaibles. Is is separated from the global scoring step
+so that we can cache the loading and scoring step.. -->
+</div>
+<div id="section-2" class="section level2 unlisted unnumbered">
+<h2></h2>
+<!--- Visualise the latest forecasts. -->
+<!-- Visualisation of forecasts (cases or deaths across time) for multiple
+forecasting dates. -->
+</div>
+<div id="latest-forecasts" class="section level2 tabset tabset_fade">
+<h2>Latest forecasts</h2>
+<p>No recent forecasts to show. Click the <code>Forecast</code> tab above to view all past forecasts.</p>
+</div>
+<div id="section-3" class="section level2 unlisted unnumbered">
+<h2></h2>
+<!-- Focus on 10 week scores. -->
+<!-- Visualisation of model scores. -->
+</div>
+<div id="predictive-performance" class="section level2 tabset tabset-fade">
+<h2>Predictive performance</h2>
+<p>Skill is shown as weighted interval score.</p>
+<div id="cases" class="section level3 tabset tabset-fade">
+<h3>Cases</h3>
+<div id="week-ahead-horizon" class="section level4">
+<h4>1 week ahead horizon</h4>
+<div id="overall-predictive-performance" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>Overall scores are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment the model does not fulfill that criterion.</p>
+</details>
+</div>
+<div id="performance-over-time" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p>No recent forecasts available targeting the last 10 weeks.</p>
+</div>
+</div>
+<div id="weeks-ahead-horizon" class="section level4">
+<h4>2 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-1" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>Overall scores are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment the model does not fulfill that criterion.</p>
+</details>
+</div>
+<div id="performance-over-time-1" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p>No recent forecasts available targeting the last 10 weeks.</p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-1" class="section level4">
+<h4>3 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-2" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>Overall scores are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment the model does not fulfill that criterion.</p>
+</details>
+</div>
+<div id="performance-over-time-2" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p>No recent forecasts available targeting the last 10 weeks.</p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-2" class="section level4">
+<h4>4 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-3" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>Overall scores are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment the model does not fulfill that criterion.</p>
+</details>
+</div>
+<div id="performance-over-time-3" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p><img src="model-report-IEM_Health-CovidProject_files/figure-html/47c821c4c7_score-plots-16-1.png" width="100%" /></p>
+</div>
+</div>
+</div>
+<div id="deaths" class="section level3 tabset tabset-fade">
+<h3>Deaths</h3>
+<div id="week-ahead-horizon-1" class="section level4">
+<h4>1 week ahead horizon</h4>
+<div id="overall-predictive-performance-4" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>Overall scores are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment the model does not fulfill that criterion.</p>
+</details>
+</div>
+<div id="performance-over-time-4" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p>No recent forecasts available targeting the last 10 weeks.</p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-3" class="section level4">
+<h4>2 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-5" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>Overall scores are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment the model does not fulfill that criterion.</p>
+</details>
+</div>
+<div id="performance-over-time-5" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p>No recent forecasts available targeting the last 10 weeks.</p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-4" class="section level4">
+<h4>3 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-6" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>Overall scores are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment the model does not fulfill that criterion.</p>
+</details>
+</div>
+<div id="performance-over-time-6" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p>No recent forecasts available targeting the last 10 weeks.</p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-5" class="section level4">
+<h4>4 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-7" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>Overall scores are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment the model does not fulfill that criterion.</p>
+</details>
+</div>
+<div id="performance-over-time-7" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p><img src="model-report-IEM_Health-CovidProject_files/figure-html/b3b816b01f_score-plots-28-1.png" width="100%" /></p>
+</div>
+</div>
+</div>
+<div id="hospitalisations" class="section level3 tabset tabset-fade">
+<h3>Hospitalisations</h3>
+<div id="week-ahead-horizon-2" class="section level4">
+<h4>1 week ahead horizon</h4>
+<div id="overall-predictive-performance-8" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>Overall scores are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment the model does not fulfill that criterion.</p>
+</details>
+</div>
+<div id="performance-over-time-8" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p>No recent forecasts available targeting the last 10 weeks.</p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-6" class="section level4">
+<h4>2 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-9" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>Overall scores are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment the model does not fulfill that criterion.</p>
+</details>
+</div>
+<div id="performance-over-time-9" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p>No recent forecasts available targeting the last 10 weeks.</p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-7" class="section level4">
+<h4>3 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-10" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>Overall scores are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment the model does not fulfill that criterion.</p>
+</details>
+</div>
+<div id="performance-over-time-10" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p>No recent forecasts available targeting the last 10 weeks.</p>
+</div>
+</div>
+<div id="weeks-ahead-horizon-8" class="section level4">
+<h4>4 weeks ahead horizon</h4>
+<div id="overall-predictive-performance-11" class="section level5">
+<h5>Overall predictive performance</h5>
+<p>Overall scores are only created for models that were used for forecasts in each of the last 4 weeks, excluding periods during which there were anomalies in the data. At the moment the model does not fulfill that criterion.</p>
+</details>
+</div>
+<div id="performance-over-time-11" class="section level5">
+<h5>Performance over time</h5>
+<p>The plots below show the data and forecasts with 50% and 90% predictive intervals and, in the panel to the right of the data plots, forecast skill as measured by the Weighted Interval Score. Lower values indicate better predictive performance.</p>
+<p>No recent forecasts available targeting the last 10 weeks.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="section-4" class="section level1 unlisted unnumbered">
+<h1></h1>
+<!--- 
+- Table with coverage by horizon for this week
+- Plot of coverage by target and horizon over time
+- PIT histograms
+--->
+<!--- 
+- Table with coverage by horizon for this week
+- Plot of coverage by target and horizon over time
+- PIT histograms
+--->
+<div id="forecast-calibration" class="section level2">
+<h2>Forecast calibration</h2>
+<p>The plots below describe the <em>calibration</em> of the model, that is its ability to correctly quantify its uncertainty, across all predicted countries.</p>
+<div id="overall-coverage" class="section level4">
+<h4>Overall coverage</h4>
+<p>Coverage is the proportion of observations that fall within a given prediction interval. Ideally, a forecast model would achieve 50% coverage of 0.50 (i.e., 50% of observations fall within the 50% prediction interval) and 95% coverage of 0.95 (i.e., 95% of observations fall within the 95% prediction interval), incidcated by the dashed horizontal lines below. Values of coverage greater than these nominal values indicate that the forecasts are <em>underconfident</em>, i.e. prediction intervals tend to be too wide, whereas values of coverage smaller than these nominal values indicate that the ensemble forecasts are <em>overconfident</em>, i.e. prediction intervals tend to be too narrow.</p>
+<p><img src="model-report-IEM_Health-CovidProject_files/figure-html/coverage-1.png" width="576" /></p>
+</div>
+<div id="pit-histograms" class="section level4">
+<h4>PIT histograms</h4>
+<p>The figures below are <em>PIT histograms</em> for the all past forecasts. These show the proportion of true values within each predictive quantile (width: 0.1). If the forecasts were perfectly calibrated, observations would fall evenly across these equally-spaced quantiles, i.e. the histograms would be flat.</p>
+<p><img src="model-report-IEM_Health-CovidProject_files/figure-html/pit-1.png" width="768" /></p>
+<!--- Number of models included in the ensemble for each country and target --->
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
