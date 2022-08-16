@@ -1,11 +1,13 @@
-name: Render and Deploy RMarkdown Website
+name: Build and Deploy RMarkdown Website
 on:
   workflow_dispatch:
   push:
     branches: main
+  pull_request:
+    branches: main
 
 jobs:
-  render-website:
+  build:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
@@ -42,10 +44,25 @@ jobs:
       - name: Render Site
         run: Rscript -e "rmarkdown::render_site(encoding = 'UTF-8')"
 
-      - name: Deploy to GitHub pages 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          branch: gh-pages
-          folder: _site
-          single-commit: true
-          clean: true
+          path: ./_site
+
+  # Deployment job
+  deploy:
+    if: github.event_name != 'pull_request'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+
