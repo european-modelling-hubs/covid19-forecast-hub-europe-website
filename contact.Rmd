@@ -16,7 +16,7 @@ We welcome all enquiries about the European Forecast Hub. We are particularly ke
 
 To get in touch, please:
 
-- Send us an email at [mail@covid19forecasthub.eu](mailto:mail@covid19forecasthub.eu)
+- Send us an email at [European.Modelling.Hub@ecdc.europa.eu](mailto:European.Modelling.Hub@ecdc.europa.eu)
 
 - Open a [Github Issue](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe/issues/new)
 
