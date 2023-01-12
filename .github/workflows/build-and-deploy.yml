@@ -35,6 +35,11 @@ jobs:
           install-r: false
           use-public-rspm: true
 
+      - name: Install R system requirements
+        run: |
+          sudo apt-get update
+          sudo apt-get install libcurl4-openssl-dev
+
       - name: Install R dependencies
         run: |
           install.packages(c("remotes", "rmarkdown"))
