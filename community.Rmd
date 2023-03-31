@@ -57,21 +57,25 @@ team_df  %>%
 The ECDC hosts weekly calls which any forecasting team is welcome to join. Each week a different team is invited to present and discuss forecasting methods. Slides and extra content provided by the teams can be accessed below. Please note that slides might be released under a different license than the MIT license used for the rest of this website:
 
 ```{r presentations, results='asis', echo=FALSE}
-library("httr")
-url <- paste0("https://api.github.com/repos/epiforecasts/",
-              "covid19-forecast-hub-europe-website/contents/presentations")
-req <- GET(url)
-stop_for_status(req)
-files <- unlist(lapply(content(req), "[[", "name"))
+files <- rev(fs::dir_ls("presentations"))
 
-for (file in rev(files)) {
-  date <- sub("^([0-9]{4})-([0-9]{2})-([0-9]{2})-.*$", "\\3/\\2/\\1", file)
-  name <- gsub("-", " ",
-               sub("^[0-9]{4}-[0-9]{2}-[0-9]{2}-([^.]*)\\..*$", "\\1", file))
-  url <-
-    paste0("https://github.com/epiforecasts/",
-           "covid19-forecast-hub-europe-website/raw/main/presentations/",
-           file)
-  cat(date, "\t\t", paste0("[", name, "](", url, ")"), "\n\n")
-}
+dates <- sub(
+  "^([0-9]{4})-([0-9]{2})-([0-9]{2})-.*$",
+  "\\3/\\2/\\1",
+  basename(files)
+)
+
+nms <- files %>%
+  fs::path_file() %>%
+  fs::path_ext_remove() %>%
+  substring(12) %>%
+  { gsub("-", " ", .) }
+
+sprintf(
+  "%s\t\t[%s](%s)",
+  dates,
+  nms,
+  files
+) %>%
+  cat(sep = "\n")
 ```
