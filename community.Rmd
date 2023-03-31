@@ -72,7 +72,7 @@ nms <- files %>%
   { gsub("-", " ", .) }
 
 sprintf(
-  "%s\t\t[%s](%s)",
+  "- %s\t\t[%s](%s)",
   dates,
   nms,
   files
