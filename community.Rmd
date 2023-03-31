@@ -16,21 +16,14 @@ library("fs")
 library("dplyr")
 
 github_repo <- "epiforecasts/covid19-forecast-hub-europe"
-branch <- "main"
 
 team_df <-
   gh::gh(
-        paste0("https://api.github.com/repos/{github_repo}/",
-               "git/trees/{branch}?recursive=1"),
-        github_repo = github_repo, branch = branch
-        ) %>%
-  pluck("tree") %>%
-  keep(~ .x$type == "blob" &&
-         grepl("metadata/", .x$path)) %>%
-  map_chr(~ glue::glue(
-                    paste0("https://raw.githubusercontent.com/{github_repo}/",
-                           "{branch}/{.x$path}")
-                  )) %>%
+    "/repos/{github_repo}/contents/{path}", 
+    github_repo = github_repo, 
+    path = "model-metadata"
+  ) %>%
+  map_chr("download_url") %>%
   set_names() %>%
   map(read_yaml) %>%
   imap_dfr(~ list(
