@@ -78,8 +78,8 @@ Please be aware of the [limitations](background.html) when interpreting the fore
 <div class="alert alert-warning" font-size: 15px>
   <strong>Disclaimer:</strong><br>
   <ul>
-    <li>Due to <strong>differences</strong> in surveillance systems and data sources, we recommend focusing on trends rather than on absolute numbers <strong>to provide an indicator of the current epidemiological situation</strong>.</li>
-    <li><strong>Please note that</strong> forecasts are a characterisation of the surveillance systems, <strong>and the forecasts will hence reflect the reported data</strong>.</li>
+    <li>Due to <strong>differences in surveillance systems and data sources</strong>, we recommend <strong>focusing on trends rather than on absolute numbers</strong> to provide an indicator of the current epidemiological situation.</li>
+    <li>Please note that forecasts are a characterisation of the surveillance systems, and the <strong>forecasts will hence reflect the reported data</strong>.</li>
   </ul>
 </div>
 
