@@ -18,7 +18,7 @@ To cite the European Covid-19 Forecast Hub in project in publications, please us
 
 _Methodology and evaluation_
 
-> Sherratt, K., Gruson, H., Johnson, H., Niehus, R., Prasse, B., Sandman, F., ... & Funk, S. (2022). Predictive performance of multi-model ensemble forecasts of COVID-19 across European nations. _medRxiv_. DOI: https://doi.org/10.1101/2022.06.16.22276024
+> Sherratt, K., Gruson, H., Johnson, H., Niehus, R., Prasse, B., Sandman, F., ... & Funk, S. (2022). Predictive performance of multi-model ensemble forecasts of COVID-19 across European nations. _eLife_. DOI: https://doi.org/10.7554/eLife.81916
 
 _Data_
 
