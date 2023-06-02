@@ -52,6 +52,11 @@ team_df  %>%
   knitr::kable(format = "markdown")
 ```
 
+# The evaluation of the European Modelling Hubs
+
+ECDC has conducted a survey among the participants of the European Modelling Hub, getting feedback and thus evaluating the European COVID-19 Forecast Hub, European COVID-19 Scenario Hub, and the European Modelling Hub meetings. The results and conclusions of the survey can be found below on the [European COVID-19 Scenario Hub webpage](https://covid19scenariohub.eu/about.html).
+
+
 # Presentations
 
 The ECDC hosts weekly calls which any forecasting team is welcome to join. Each week a different team is invited to present and discuss forecasting methods. Slides and extra content provided by the teams can be accessed below. Please note that slides might be released under a different license than the MIT license used for the rest of this website:
