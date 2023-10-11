@@ -38,7 +38,7 @@ window.onresize = resize_iframe();
 </script>
 
 <script type="text/javascript">
-  const iframeSrc = "https://covid19-forecast-hub-europe.github.io/covid19-forecast-hub-europe-viz/";
+  const iframeSrc = "https://european-modelling-hubs.github.io/covid19-forecast-hub-europe-viz/";
   window.addEventListener("load", function(e) {
     const iframe = document.getElementById("vizFrame");
     if (iframe) {
