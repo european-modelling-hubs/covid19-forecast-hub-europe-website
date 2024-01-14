@@ -59,7 +59,7 @@ window.onresize = resize_iframe();
 
   eventer(messageEvent, function (e) {
     
-    if (e.origin !== 'https://covid19-forecast-hub-europe.github.io') {
+    if (e.origin !== 'https://european-modelling-hubs.github.io') {
       return;
     }
     
