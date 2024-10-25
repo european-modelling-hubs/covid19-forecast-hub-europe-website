@@ -17,6 +17,11 @@ h1 {
 }
 </style>
 
+<p style="border: 1px solid #0073ff; padding: 10px; text-align: center;">
+This website has been adjourned until October 2024.<br/> To explore recent forecasts please visit the new <a href="https://respicast.ecdc.europa.eu/">RespiCast website</a>.
+</p>
+</br>
+
 :::::: {.columns}
 
 ::: {.column width="48%"}
