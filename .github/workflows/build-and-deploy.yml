@@ -12,22 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: dawidd6/action-download-artifact@v2
-        with:
-          github_token: ${{ secrets.FORECASTHUB_TOKEN }}
-          workflow: reports-country.yml
-          name: country-reports
-          path: reports
-          repo: covid19-forecast-hub-europe/covid19-forecast-hub-europe
-
-      - uses: dawidd6/action-download-artifact@v2
-        with:
-          github_token: ${{ secrets.FORECASTHUB_TOKEN }}
-          workflow: reports-model.yml
-          name: model-reports
-          path: reports
-          repo: covid19-forecast-hub-europe/covid19-forecast-hub-europe
-
       - uses: r-lib/actions/setup-pandoc@v1
 
       - uses: r-lib/actions/setup-r@v1

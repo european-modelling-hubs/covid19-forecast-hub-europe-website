@@ -6,18 +6,4 @@ output:
     toc_float: false
 ---
 
-<style>
-  .title {
-    display: none;
-  }
-</style>
-
-```{r iframe, results = 'asis', echo = FALSE}
-cat(paste0("<iframe width=\"100%\" style=\"height: calc(100vh - 107px);\"",
-           # Some height has to be kept for the navbar (+ its margin) to 
-           # avoid the double scrollbar
-           "id=\"reportFrame\" src=\"reports/model-report-EuroCOVIDhub-ensemble.html\"\n"))
-cat("  frameborder=\"0\">\n")
-cat("</iframe>\n")
-```
-
+The creation of real-time reports for the European COVID-19 Forecasting has stopped.
