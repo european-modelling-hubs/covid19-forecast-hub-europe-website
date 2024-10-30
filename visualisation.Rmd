@@ -71,6 +71,10 @@ window.onresize = resize_iframe();
   });
 </script>
 
+<p style="border: 1px solid #0073ff; padding: 10px; text-align: center; font-size: 20px">
+This website has been adjourned until October 2024.<br/> To explore recent forecasts please visit the new <a href="https://respicast.ecdc.europa.eu/">RespiCast website</a>.
+</p>
+
 <p id="limitations">
 Please be aware of the [limitations](background.html) when interpreting the forecasts. We recommend to focus on the ensemble which would be expected to give the most reliable forecasts. For horizons beyond one week case forecasts in particular can rapidly become unreliable, especially in times of changing non-pharmaceutical or dominant variants. The individual models that constitute the ensemble have been contributed by independent teams. They are shown for transparency but should not be taken on their own without fully acknowledging their assumptions and limitations and engaging with the listed authors.
 </p>
